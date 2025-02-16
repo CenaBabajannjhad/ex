@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://yourwebsite.com/signup.html">
+  <title>ثبت نام </title>
+  <link rel="stylesheet" href="/style/flowbite.min.css">
+  <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+  <!--background-->
+  <div class="signup-background-gradient h-screen w-full flex items-center justify-evenly">
+    <!--container-->
+    <div class="p-3 w-full sm:w-[85%] lg:max-w-[1080px] mx-auto flex justify-around gap-x-6">
+      <!--right side-->
+      <div class="z-20 relative">
+        <!--tittle add on medium screen-->
+        <div class="w-[220px] mx-auto md:hidden mb-10 text-center">
+          <a href="index.html">
+            <img class="w-full" src="../../assets/img/logo/EXINESS.png" alt="EXINESS Logo">
+          </a>
+        </div>
+        <div class="shadow-2xl rounded-3xl text-center p-14 lg:py-8 signup-custom-background">
+          <form id="signup" class="space-y-2">
+            <div class="relative">
+              <label class="sr-only" for="Name">نام</label>
+              <input id="Name" type="text" placeholder="نام"
+                class="focus:ring-0 border-1 bg-transparent text-white border-white rounded-xl px-5 py-3 block placeholder:text-white/65 text-base" required/>
+              <span id="nameError" class="hidden text-red-800 absolute -top-3 left-4 text-sm font-light">نام نا معتبر است</span>
+            </div>
+            <div class="relative">
+              <label class="sr-only" for="userLastName">نام خانوادگی</label>
+              <input id="userLastName" type="text" placeholder="نام خانوادگی"
+                class="focus:ring-0 border-1 bg-transparent text-white border-white rounded-xl px-5 py-3 block placeholder:text-white/65 text-base" required/>
+              <span id="lastNameError" class="hidden text-red-800 absolute -top-3 left-4 text-sm font-light">نام خانوادگی نا معتبر است</span>
+            </div>
+            <div class="relative">
+              <label class="sr-only" for="userEmail">ایمیل</label>
+              <input id="userEmail" type="email" placeholder="ایمیل"
+                class="focus:ring-0 border-1 bg-transparent text-white border-white rounded-xl px-5 py-3 block placeholder:text-white/65 text-base" required/>
+              <span id="emailError" class="hidden text-red-800 absolute -top-3 left-4 text-sm font-light">ایمیل نا معتبر است</span>
+            </div>
+            <div class="relative">
+              <label class="sr-only" for="userPhoneNumber">شماره همراه</label>
+              <input id="userPhoneNumber" type="text" placeholder="شماره همراه"
+                class="focus:ring-0 border-1 bg-transparent text-white border-white rounded-xl px-5 py-3 block placeholder:text-white/65 text-base" required/>
+              <span id="phoneNumberError" class="hidden text-red-800 absolute -top-3 left-4 text-sm font-light">شماره نا معتبر است</span>
+            </div>
+            <div class="relative">
+              <label class="sr-only" for="userName">نام کاربری</label>
+              <input id="userName" type="text" placeholder="نام کاربری"
+                class="focus:ring-0 border-1 bg-transparent text-white border-white rounded-xl px-5 py-3 block placeholder:text-white/65 text-base" required/>
+              <span id="userNameError" class="hidden text-red-800 absolute -top-3 left-4 text-sm font-light">نام کاربری نا معتبر است</span>
+            </div>
+            <div class="relative">
+              <label class="sr-only" for="userPassword">رمز عبور</label>
+              <input id="userPassword" type="text" placeholder="رمز عبور"
+                class="focus:ring-0 border-1 bg-transparent text-white border-white rounded-xl px-5 py-3 block placeholder:text-white/65 text-base" required/>
+              <span id="userPasswordError" class="hidden text-red-800 absolute -top-3 left-4 text-sm font-light">حداقل 8 کارکتر</span>
+            </div>
+            <div class="space-x-1 mb-8 text-right">
+              <input id="checkbox-table-search-1" type="checkbox" 
+                class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple " required />
+              <label class="checked:ring-0 text-white text-xs bg-transparent" for="checkbox-table-search-1">با شرایط و قوانین اکسینس
+                موافق
+                هستم</label>
+            </div>
+            <button type="submit" class="text-[#410081] cursor-pointer font-extrabold text-base rounded-4xl px-16 py-2 bg-white">
+              ثبت نام
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!--left side-->
+      <!--add on large screen-->
+      <div class="md:flex flex-col items-center justify-between hidden">
+        <img class="w-[280px] hidden md:inline-block" src="../../assets/img/logo/EXINESS.png" alt="">
+        <img class="lg:w-[420px]" src="../../assets/img/forms/login/login.png" alt="" />
+      </div>
+    </div>
+  </div> 
+
+  <script type="module" src="/js/form/signup.js"></script>
+</body>
+</html>

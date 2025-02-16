@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tail": "npx @tailwindcss/cli -i ./src/style/input.css -o ./src/style/main.css --watch"
+    "tail": "npx @tailwindcss/cli -i ./style/input.css -o ./style/main.css --watch"
   },
   "author": "",
   "license": "ISC",

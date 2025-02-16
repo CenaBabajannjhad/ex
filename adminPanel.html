@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>پنل ادمین</title>
+  <link rel="stylesheet" href="/style/main.css" />
+  <link rel="stylesheet" href="/js/lib/flowbite/flowbite.min.css">
+</head>
+
+<body class="h-screen px-10 overflow-hidden bg-panel">
+  <!-- header -->
+  <header class="bg-white px-7 py-4.5 rounded-br-2xl rounded-bl-2xl">
+    <section class="flex items-center justify-between">
+      <div class="flex items-center">
+        <div class="ml-24">
+          <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
+            class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full" type="button">
+            <span class="sr-only">Open user menu</span>
+            <img class="w-8 h-8 me-3 rounded-full" src="../../assets/img/articles/article-img-1.png" alt="user photo">
+            نام کاربر
+            <img class="w-4 mr-2" src="../../assets/img/icons/dropdown.png" alt="dropdown icon">
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdownAvatarName"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+              <div class="font-medium ">Pro User</div>
+              <div class="truncate">name@flowbite.com</div>
+            </div>
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+              </li>
+            </ul>
+            <div class="py-2">
+              <a href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                out</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="flex items-center max-w-sm mx-auto">
+            <label for="simple-search" class="sr-only">Search</label>
+            <img class="w-6" src="../../assets/img/icons/search.png" alt="">
+            <input class="border-none text-sm focus:ring-0 font-normal" type="text" placeholder="جستجوی سریع">
+          </form>
+        </div>
+      </div>
+      <!-- notification -->
+      <div>
+        <button class="flex items-center justify-center">
+          <img class="w-4" src="../../assets/img/icons/notif.png" alt="">
+        </button>
+      </div>
+    </section>
+  </header>
+  <!-- main -->
+  <main class="pt-3 pb-18 h-full">
+    <div class="h-full grid grid-cols-13 grid-rows-12 gap-x-3">
+      <!-- aside -->
+      <aside class="col-span-3 row-span-12 h-[95%] bg-white shadow-admin rounded-2xl px-4 pb-6 pt-8 overflow-y-auto"
+        dir="ltr">
+        <!-- logo -->
+        <div class="flex items-center justify-center mb-7">
+          <img class="w-[160px]" src="../../assets/img/logo/EXINESS.png" alt="">
+        </div>
+        <!-- aside links -->
+        <ul id="aside_links_parent" class="space-y-2" dir="rtl">
+          <li class="active_link text-black pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+              پیشخوان
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+              </svg>
+              تنظیمات
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+              مدیریت کاربران
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+              </svg>
+
+              مدیریت مقالات
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+              </svg>
+
+              مدیریت نظرات
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+              </svg>
+
+              مدیریت بنر ها
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+              </svg>
+
+              درخواست های مشاوره
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              </svg>
+
+              مدیریت فایل های PDF
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M7.498 15.25H4.372c-1.026 0-1.945-.694-2.054-1.715a12.137 12.137 0 0 1-.068-1.285c0-2.848.992-5.464 2.649-7.521C5.287 4.247 5.886 4 6.504 4h4.016a4.5 4.5 0 0 1 1.423.23l3.114 1.04a4.5 4.5 0 0 0 1.423.23h1.294M7.498 15.25c.618 0 .991.724.725 1.282A7.471 7.471 0 0 0 7.5 19.75 2.25 2.25 0 0 0 9.75 22a.75.75 0 0 0 .75-.75v-.633c0-.573.11-1.14.322-1.672.304-.76.93-1.33 1.653-1.715a9.04 9.04 0 0 0 2.86-2.4c.498-.634 1.226-1.08 2.032-1.08h.384m-10.253 1.5H9.7m8.075-9.75c.01.05.027.1.05.148.593 1.2.925 2.55.925 3.977 0 1.487-.36 2.89-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398-.306.774-1.086 1.227-1.918 1.227h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 0 0 .303-.54" />
+              </svg>
+
+              گزارشات
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+              </svg>
+
+              مدیریت ادمین ها
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+              </svg>
+
+              پشتیبانی
+            </button>
+          </li>
+          <li class="flex items-center gap-x-2 pr-4 py-3.5 rounded-2xl">
+            <button class="cursor-pointer flex items-center gap-x-3 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+              </svg>
+              خروج از حساب
+            </button>
+          </li>
+        </ul>
+      </aside>
+      <!-- data -->
+      <section class="col-span-10 row-span-12  h-[95%] overflow-y-auto scrollbar-hidden">
+        <!-- main panel -->
+        <div id="main-panel" class="grid grid-cols-6 grid-rows-6 gap-3">
+          <div class="col-span-3 row-span-full bg-white shadow-admin px-5 py-6 rounded-2xl flex flex-col gap-y-4">
+            <div class="flex items-center gap-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 text-main-Purple">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+              </svg>
+              <h3 class="text-sm font-semibold whitespace-nowrap">آخرین نظر</h3>
+            </div>
+            <p class="font-light text-xs">مثل همیشه عالی بودش، اتفاقا برا من پیش اومده همچین موقعیتی و و کاملا با
+              گوشت و استخون حسش کردم و ...</p>
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="size-4 text-main-Purple">
+                <path fill-rule="evenodd"
+                  d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <a class="text-sm font-light text-main-Purple" href="#">مشاهده جزئیات بیشتر</a>
+            </div>
+          </div>
+          <div class="col-span-3 row-span-full bg-white shadow-admin px-5 py-6 rounded-2xl flex flex-col gap-y-4">
+            <div class="flex items-center gap-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 text-main-Purple">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+              </svg>
+              <h3 class="text-[13px] font-semibold whitespace-nowrap">درخواست مشاوره جدید</h3>
+            </div>
+            <div class="flex items-center gap-x-2">
+              <div>
+                <img class="w-10 h-10 rounded-full" src="../../assets/img/articles/article-img-1.png"
+                  alt="Rounded avatar">
+              </div>
+              <div>
+                <h6 class="font-light text-[13px]">نام : <span>نام کاربر</span></h6>
+                <h6 class="font-light text-[13px]">موضوع : <span>طراحی سایت</span></h6>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="size-4 text-main-Purple">
+                <path fill-rule="evenodd"
+                  d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <a class="text-sm font-light text-main-Purple" href="#">مشاهده جزئیات بیشتر</a>
+            </div>
+          </div>
+          <div class="col-span-6 bg-white shadow-admin px-5 py-6 rounded-2xl">
+            <div class="border-b-1 border-black pb-4 mb-4">
+              <h2 class="flex items-center gap-x-2 text-[13px] font-semibold whitespace-nowrap">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-6 text-main-Purple">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                ویرایش اطلاعات
+              </h2>
+            </div>
+            <form class="space-y-4" action="#">
+              <div class="space-y-1">
+                <label class="block text-sm font-normal pr-2" for="fullName">نام و نام خانوادگی</label>
+                <input
+                  class="text-sm rounded-xl px-4 py-2 border-none w-full focus:ring-0 bg-smoky-white placeholder:text-[12px]"
+                  id="fullName" type="text" placeholder="نام و نام خانوادگی">
+              </div>
+              <div class="space-y-1">
+                <label class="block text-sm font-normal pr-2" for="userName">نام کاربری</label>
+                <input
+                  class="text-sm rounded-xl px-4 py-2 border-none w-full focus:ring-0 bg-smoky-white placeholder:text-[12px]"
+                  id="userName" type="text" placeholder="نام کاربری">
+              </div>
+              <div class="space-y-1">
+                <label class="block text-sm font-normal pr-2" for="email">ایمیل</label>
+                <input
+                  class="text-sm rounded-xl px-4 py-2 border-none w-full focus:ring-0 bg-smoky-white placeholder:text-[12px]"
+                  id="email" type="text" placeholder="ایمیل">
+              </div>
+              <div class="space-y-1">
+                <label class="block text-sm font-normal pr-2" for="title">عنوان / سمت</label>
+                <input
+                  class="text-sm rounded-xl px-4 py-2 border-none w-full focus:ring-0 bg-smoky-white placeholder:text-[12px]"
+                  id="title" type="text" placeholder="عنوان / سمت">
+              </div>
+            </form>
+          </div>
+          <div
+            class="col-span-3 bg-white shadow-admin rounded-2xl flex flex-col gap-y-4 overflow-y-auto scrollbar-hidden">
+            <div class="flex items-center gap-x-4 px-5 pt-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+              </svg>
+              <h3 class="text-sm font-semibold whitespace-nowrap">ویرایش کاربران</h3>
+            </div>
+            <div>
+              <div class="sm:rounded-lg">
+                <div
+                  class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4">
+                  <table class="w-full text-sm text-right overflow-y-auto">
+                    <thead class="text-xs">
+                      <tr>
+                        <th>
+                          <div class="flex items-center pr-6">
+                            <input id="checkbox-table-search-1" type="checkbox"
+                              class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                          </div>
+                        </th>
+                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                          نام کاربری
+                        </th>
+                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                          ایمیل
+                        </th>
+                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                          سمت
+                        </th>
+                        <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                          نوشته ها
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-smoky-white border-b-1 border-dark-smoky">
+                        <td class="w-4 p-4 text-sm font-base">
+                          <div class="flex items-center pr-2">
+                            <input id="checkbox-table-search-1" type="checkbox"
+                              class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                          </div>
+                        </td>
+                        <th scope="row" class="flex items-center px-6 py-4 text-black whitespace-nowrap">
+                          <div class="">
+                            <div class="text-sm font-semibold">
+                              <h3>نام کاربر</h3>
+                            </div>
+                          </div>
+                        </th>
+                        <td>
+                          <div class="text-sm font-light text-gray-500 ">
+                            <h4>user@gmail.com</h4>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm font-semibold text-black/80">
+                          مدیریت
+                        </td>
+                        <td class="px-6 py-4 text-sm font-base text-black/80">
+                          10
+                        </td>
+                      </tr>
+                      <tr class="bg-smoky-white border-b-1 border-dark-smoky">
+                        <td class="w-4 p-4 text-sm font-base">
+                          <div class="flex items-center pr-2">
+                            <input id="checkbox-table-search-1" type="checkbox"
+                              class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                          </div>
+                        </td>
+                        <th scope="row" class="flex items-center px-6 py-4 text-black whitespace-nowrap">
+                          <div class="">
+                            <div class="text-sm font-semibold">
+                              <h3>نام کاربر</h3>
+                            </div>
+                          </div>
+                        </th>
+                        <td>
+                          <div class="text-sm font-light text-gray-500 ">
+                            <h4>user@gmail.com</h4>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm font-semibold text-black/80">
+                          مدیریت
+                        </td>
+                        <td class="px-6 py-4 text-sm font-base text-black/80">
+                          10
+                        </td>
+                      </tr>
+                      <tr class="bg-smoky-white border-b-1 border-dark-smoky">
+                        <td class="w-4 p-4 text-sm font-base">
+                          <div class="flex items-center pr-2">
+                            <input id="checkbox-table-search-1" type="checkbox"
+                              class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                          </div>
+                        </td>
+                        <th scope="row" class="flex items-center px-6 py-4 text-black whitespace-nowrap">
+                          <div class="">
+                            <div class="text-sm font-semibold">
+                              <h3>نام کاربر</h3>
+                            </div>
+                          </div>
+                        </th>
+                        <td>
+                          <div class="text-sm font-light text-gray-500 ">
+                            <h4>user@gmail.com</h4>
+                          </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm font-semibold text-black/80">
+                          مدیریت
+                        </td>
+                        <td class="px-6 py-4 text-sm font-base text-black/80">
+                          10
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-3 h-fit bg-white shadow-admin rounded-2xl flex flex-col gap-y-4">
+            <div class="flex items-center gap-x-4 px-5 pt-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+              </svg>
+              <h3 class="text-sm font-semibold whitespace-nowrap">مدیریت ادمین ها</h3>
+            </div>
+            <div class="h-full overflow-x-auto grid grid-cols-4 items-center scrollbar-hidden px-4 pb-4 space-x-2">
+              <div class="bg-smoky-white rounded-xl h-full py-3 space-y-2">
+                <div class="flex items-center justify-center">
+                  <img class="w-12 h-12 rounded-full" src="../../assets/img/articles/article-img-1.png" alt="admin img">
+                </div>
+                <div>
+                  <h4 class="text-center text-sm font-semibold">نام ادمین</h4>
+                </div>
+              </div>
+              <div class="bg-smoky-white rounded-xl h-full py-3 space-y-2">
+                <div class="flex items-center justify-center">
+                  <img class="w-12 h-12 rounded-full" src="../../assets/img/articles/article-img-1.png" alt="admin img">
+                </div>
+                <div>
+                  <h4 class="text-center text-sm font-semibold">نام ادمین</h4>
+                </div>
+              </div>
+              <div class="bg-smoky-white rounded-xl h-full py-3 space-y-2">
+                <div class="flex items-center justify-center">
+                  <img class="w-12 h-12 rounded-full" src="../../assets/img/articles/article-img-1.png" alt="admin img">
+                </div>
+                <div>
+                  <h4 class="text-center text-sm font-semibold">نام ادمین</h4>
+                </div>
+              </div>
+              <div class="rounded-xl h-full">
+                <button class="w-full h-full border-2 rounded-2xl border-dark-smoky text-dark-smoky cursor-pointer">
+                  <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    اضافه کردن ادمین
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- file management -->
+        <div id="setting-panel" class="hidden w-full h-full bg-white">
+          <div class="flex items-center justify-between gap-x-4 p-5 ">
+            <div class="flex items-center gap-x-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 text-main-Purple">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              </svg>
+              <h3 class="text-sm font-semibold whitespace-nowrap">اطلاعات فایل ها</h3>
+            </div>
+
+            <div class="flex items-center gap-x-2">
+              <div>
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                  class=" focus:outline-none focus:ring-0 text-[12px] rounded-xl font-light px-2 py-1 text-center inline-flex items-center bg-smoky-white"
+                  type="button">فیلتر بر اساس<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 4 4 4-4" />
+                  </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdown" class="z-10 hidden bg-white divide-y rounded-lg shadow-sm w-44">
+                  <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 ">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 ">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 ">Earnings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 ">Sign
+                        out</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+              <div class="bg-smoky-white p-1 rounded-xl">
+                <button class="flex items-center gap-x-2 text-[12px] font-light">
+                  اضافه کردن فایل جدید
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                  </svg>
+                </button>
+              </div>
+              <div>
+                <button class="bg-smoky-white text-[12px] py-1 px-2 font-light rounded-xl">حذف همه</button>
+              </div>
+              <div>
+                <button class="bg-smoky-white text-[12px] py-1 px-2 font-light rounded-xl">اجرا</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4">
+            <table class="w-full text-sm text-right overflow-y-auto">
+              <thead class="text-xs">
+                <tr>
+                  <th>
+                    <div class="flex items-center pr-6">
+                      <input id="checkbox-table-search-1" type="checkbox"
+                        class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                      <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                    </div>
+                  </th>
+                  <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                    نام کاربری
+                  </th>
+                  <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                    تاریخ و ساعت اپلود
+                  </th>
+                  <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                    حجم
+                  </th>
+                  <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                    بازدید
+                  </th>
+                  <th scope="col" class="px-6 py-3 whitespace-nowrap">
+                    ادمین
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-smoky-white border-b-1 border-dark-smoky">
+                  <td class="w-4 p-4 text-sm font-base">
+                    <div class="flex items-center pr-2">
+                      <input id="checkbox-table-search-1" type="checkbox"
+                        class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                      <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                    </div>
+                  </td>
+                  <th scope="row" class="flex items-center px-6 py-4 text-black whitespace-nowrap">
+                    <div class="">
+                      <div class="text-sm font-semibold">
+                        <h3>نام کاربر</h3>
+                      </div>
+                    </div>
+                  </th>
+                  <td>
+                    <div class="text-sm font-light text-gray-500 ">
+                      <h4>1403/11/01 - 12:00</h4>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-sm font-semibold text-black/80">
+                    20K
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80">
+                    10
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80">
+                    نام ادمین
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80 space-x-3">
+                    <button class="text-main-Purple text-sm font-light">حذف</button>
+                    <button class="text-main-Purple text-sm font-light">دانلود</button>
+                  </td>
+                </tr>
+                <tr class="bg-smoky-white border-b-1 border-dark-smoky">
+                  <td class="w-4 p-4 text-sm font-base">
+                    <div class="flex items-center pr-2">
+                      <input id="checkbox-table-search-1" type="checkbox"
+                        class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                      <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                    </div>
+                  </td>
+                  <th scope="row" class="flex items-center px-6 py-4 text-black whitespace-nowrap">
+                    <div class="">
+                      <div class="text-sm font-semibold">
+                        <h3>نام کاربر</h3>
+                      </div>
+                    </div>
+                  </th>
+                  <td>
+                    <div class="text-sm font-light text-gray-500 ">
+                      <h4>1403/11/01 - 12:00</h4>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-sm font-semibold text-black/80">
+                    20K
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80">
+                    10
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80">
+                    نام ادمین
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80 space-x-3">
+                    <button class="text-main-Purple text-sm font-light">حذف</button>
+                    <button class="text-main-Purple text-sm font-light">دانلود</button>
+                  </td>
+                </tr>
+                <tr class="bg-smoky-white border-b-1 border-dark-smoky">
+                  <td class="w-4 p-4 text-sm font-base">
+                    <div class="flex items-center pr-2">
+                      <input id="checkbox-table-search-1" type="checkbox"
+                        class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                      <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                    </div>
+                  </td>
+                  <th scope="row" class="flex items-center px-6 py-4 text-black whitespace-nowrap">
+                    <div class="">
+                      <div class="text-sm font-semibold">
+                        <h3>نام کاربر</h3>
+                      </div>
+                    </div>
+                  </th>
+                  <td>
+                    <div class="text-sm font-light text-gray-500 ">
+                      <h4>1403/11/01 - 12:00</h4>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-sm font-semibold text-black/80">
+                    20K
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80">
+                    10
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80">
+                    نام ادمین
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80 space-x-3">
+                    <button class="text-main-Purple text-sm font-light">حذف</button>
+                    <button class="text-main-Purple text-sm font-light">دانلود</button>
+                  </td>
+                </tr>
+                <tr class="bg-smoky-white border-b-1 border-dark-smoky">
+                  <td class="w-4 p-4 text-sm font-base">
+                    <div class="flex items-center pr-2">
+                      <input id="checkbox-table-search-1" type="checkbox"
+                        class="w-4 h-4 text-main-Purple bg-gray-100 rounded-sm focus:ring-main-Purple ">
+                      <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                    </div>
+                  </td>
+                  <th scope="row" class="flex items-center px-6 py-4 text-black whitespace-nowrap">
+                    <div class="">
+                      <div class="text-sm font-semibold">
+                        <h3>نام کاربر</h3>
+                      </div>
+                    </div>
+                  </th>
+                  <td>
+                    <div class="text-sm font-light text-gray-500 ">
+                      <h4>1403/11/01 - 12:00</h4>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-sm font-semibold text-black/80">
+                    20K
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80">
+                    10
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80">
+                    نام ادمین
+                  </td>
+                  <td class="px-6 py-4 text-sm font-base text-black/80 space-x-3">
+                    <button class="text-main-Purple text-sm font-light">حذف</button>
+                    <button class="text-main-Purple text-sm font-light">دانلود</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- comment management -->
+        <div id="comments-panel" class="hidden w-full h-full grid grid-cols-3 gap-x-3">
+          <div class="col-span-2 flex flex-col justify-between bg-white rounded-2xl py-4 px-3">
+            <div class="border-1 border-black rounded-2xl xl:my-2 2xl:my-6 h-full">
+              <div class=" flex items-center justify-between ">
+                <div class="p-2 flex items-center gap-x-2">
+                  <img class="w-10 h-10 rounded-full" src="../../assets/img/articles/article-img-1.png"
+                    alt="Rounded avatar">
+                  <h2 class="text-sm font-semibold">نام کاربر</h2>
+                </div>
+                <div class="pl-2">
+                  <button class="bg-smoky-white px-6 py-1 rounded-xl text-[12px]">حذف</button>
+                  <button class="bg-smoky-white px-6 py-1 rounded-xl text-[12px]">انتشار</button>
+                </div>
+              </div>
+              <div class="p-4 pb-8 text-sm font-normal ">
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                  متون بلکه
+                  روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+                  با
+                  هدف بهبود
+                  ابزارهای کاربردی می باشد</p>
+              </div>
+            </div>
+            <div class="bg-dark-smoky grid items-center grid-cols-4 px-6 py-4 rounded-xl">
+              <div class="flex items-center justify-center gap-x-2">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                  </svg>
+                </button>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </button>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-center gap-x-2">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M17.995 3.744v7.5a6 6 0 1 1-12 0v-7.5m-2.25 16.502h16.5" />
+                  </svg>
+                </button>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M5.248 20.246H9.05m0 0h3.696m-3.696 0 5.893-16.502m0 0h-3.697m3.697 0h3.803" />
+                  </svg>
+                </button>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5">
+                    <path stroke-linejoin="round"
+                      d="M6.75 3.744h-.753v8.25h7.125a4.125 4.125 0 0 0 0-8.25H6.75Zm0 0v.38m0 16.122h6.747a4.5 4.5 0 0 0 0-9.001h-7.5v9h.753Zm0 0v-.37m0-15.751h6a3.75 3.75 0 1 1 0 7.5h-6m0-7.5v7.5m0 0v8.25m0-8.25h6.375a4.125 4.125 0 0 1 0 8.25H6.75m.747-15.38h4.875a3.375 3.375 0 0 1 0 6.75H7.497v-6.75Zm0 7.5h5.25a3.75 3.75 0 0 1 0 7.5h-5.25v-7.5Z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-center">
+                <button>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                    </svg>
+                  </button>
+                </button>
+              </div>
+              <div class="flex items-center justify-center gap-x-2">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                  </svg>
+                </button>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="relative border-1 border-black rounded-2xl  xl:my-2 2xl:my-6 h-full text-sm font-normal">
+              <textarea class="w-full h-full border-none rounded-2xl">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع
+                با هدف بهبود ابزارهای کاربردی می باشد
+              </textarea>
+              <button class="absolute left-2 bottom-2 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-5">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                </svg>
+              </button>
+            </div>
+            <button class="bg-main-Purple text-white w-1/3 py-3 rounded-2xl">پاسخ</button>
+          </div>
+          <div class="col-span-1 bg-white rounded-2xl py-4 px-3">
+            <div class="p-2 flex items-center justify-between gap-x-2 mb-6">
+              <div class="flex items-center justify-between gap-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                </svg>
+                <h3 class="text-sm font-semibold">نظرات</h3>
+              </div>
+              <div>
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                  class="text-white bg-main-Purple focus:ring-0 focus:outline-none font-normal rounded-lg text-[12px] px-5 py-2.5 text-center inline-flex items-center"
+                  type="button">مقاله مورد نظر<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 4 4 4-4" />
+                  </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                        out</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+            <div class="overflow-y-auto scrollbar-hidden">
+              <div class="w-full flex items-center justify-between mb-4">
+                <button
+                  class="cursor-pointer font-light xl:text-[9px] 2xl:text-[11px] whitespace-nowrap text-black">همه(16)</button>
+                <button
+                  class="cursor-pointer font-light xl:text-[9px] 2xl:text-[11px] whitespace-nowrap text-green-800">تایید
+                  شده ها (5)</button>
+                <button
+                  class="cursor-pointer font-light xl:text-[9px] 2xl:text-[11px] whitespace-nowrap text-pink-800">در
+                  انتظار تایید(10)</button>
+                <button
+                  class="cursor-pointer font-light xl:text-[9px] 2xl:text-[11px] whitespace-nowrap text-red-900">خوانده
+                  نشده(0)</button>
+                <button
+                  class="cursor-pointer font-light xl:text-[9px] 2xl:text-[11px] whitespace-nowrap text-red-600">سطل
+                  زباله(1)</button>
+              </div>
+              <div>
+                <div class="w-full flex justify-between p-2 bg-green-500 rounded-2xl">
+                  <div>
+                    <div class="flex items-center space-x-2">
+                      <div>
+                        <img class="w-12 h-12 rounded-full" src="../../assets/img/articles/article-img-1.png" alt="">
+                      </div>
+                      <div>
+                        <h2 class="text-[11px] font-semibold">نام کاربری</h2>
+                        <p class="text-[10px] text-black/95 font-light">متن نظر ...</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-2">
+                    <p class="text-[9px] text-black/45">13:30 - 3 بهمن</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- article management -->
+        <div id="article-panel" class="hidden w-full h-full grid grid-cols-3 gap-x-2">
+          <div class="col-span-2 flex flex-col justify-between rounded-2xl pt-2 px-3">
+            <div class="flex items-center justify-between mb-2 ">
+              <h5 class="text-sm font-light">ایجاد مقاله جدید</h5>
+              <button class="bg-main-Purple text-white px-4 py-1 rounded-xl text-sm font-light">
+                افزودن مقاله جدید
+              </button>
+            </div>
+            <div class="grid grid-cols-2 w-full gap-x-2 mb-2">
+              <div class="w-full h-full">
+                <input class="w-full h-full border-1 border-black py-4 rounded-xl text-sm placeholder-black" type="text"
+                  placeholder="عنوان مقاله">
+              </div>
+
+              <div class="bg-white flex items-center justify-between border-1 px-4 border-black rounded-xl">
+                <div class="flex items-center justify-start h-full w-2/3">
+                  <label for="article-img" class="text-sm">افزودن تصویر</label>
+                  <input id="article-img" type="file" hidden />
+                </div>
+                <div>
+                  <div class="w-14 h-8 rounded-lg bg-gray-500"></div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white w-full h-full shadow-admin rounded-2xl p-2 mb-2">
+              <div class="bg-dark-smoky grid items-center grid-cols-4 px-6 py-4 rounded-xl mb-4">
+                <div class="flex items-center justify-center gap-x-2">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                    </svg>
+                  </button>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                  </button>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center justify-center gap-x-2">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.995 3.744v7.5a6 6 0 1 1-12 0v-7.5m-2.25 16.502h16.5" />
+                    </svg>
+                  </button>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-5">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.248 20.246H9.05m0 0h3.696m-3.696 0 5.893-16.502m0 0h-3.697m3.697 0h3.803" />
+                    </svg>
+                  </button>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-5">
+                      <path stroke-linejoin="round"
+                        d="M6.75 3.744h-.753v8.25h7.125a4.125 4.125 0 0 0 0-8.25H6.75Zm0 0v.38m0 16.122h6.747a4.5 4.5 0 0 0 0-9.001h-7.5v9h.753Zm0 0v-.37m0-15.751h6a3.75 3.75 0 1 1 0 7.5h-6m0-7.5v7.5m0 0v8.25m0-8.25h6.375a4.125 4.125 0 0 1 0 8.25H6.75m.747-15.38h4.875a3.375 3.375 0 0 1 0 6.75H7.497v-6.75Zm0 7.5h5.25a3.75 3.75 0 0 1 0 7.5h-5.25v-7.5Z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center justify-center">
+                  <button>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                      </svg>
+                    </button>
+                  </button>
+                </div>
+                <div class="flex items-center justify-center gap-x-2">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                  </button>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <textarea class="w-full xl:h-[75%] 2xl:h-[80%] text-sm font-light bg-none rounded-xl " name=""
+                id=""></textarea>
+            </div>
+            <div class="text-left">
+              <button class="bg-main-Purple text-white rounded-xl px-12 py-3 text-sm font-semibold">ذخیره</button>
+              <button class="bg-main-Purple text-white rounded-xl px-12 py-3 text-sm font-semibold">انتشار</button>
+            </div>
+          </div>
+          <div class="col-span-1 bg-white rounded-2xl py-4 px-3 overflow-y-auto">
+            <div class="p-2 flex items-center justify-between gap-x-2 mb-6 ">
+              <div class="flex items-center justify-between gap-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                </svg>
+                <h3 class="text-sm font-semibold">نظرات</h3>
+              </div>
+              <div class="bg-main-Purple w-2/4 rounded-xl px-3 py-2 flex items-center justify-between">
+                <input
+                  class="bg-main-Purple w-full text-sm font-light placeholder-white focus:outline-0 focus:ring-0 text-white"
+                  placeholder="جست و جو" />
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-3">
+              <button class="text-[12px] font-light text-green-600">انتشار شده (5)</button>
+              <button class="text-[12px] font-light text-main-Purple">ذخیره شده (5)</button>
+              <button class="text-[12px] font-light text-red-600">حذف شده (5)</button>
+            </div>
+            <div class="flex flex-col items-center gap-y-2 ">
+              <section class="w-full flex items-center gap-x-2 bg-main-Purple/35 p-2 rounded-xl">
+                <div class="w-40 h-25 rounded-2xl bg-black/25">
+                </div>
+                <div class="flex flex-col items-right h-full w-full justify-between">
+                  <div>
+                    <h6 class="font-semibold text-sm">عنوان</h6>
+                    <p class="text-[13px] font-light">توضیحات مربوطه</p>
+                  </div>
+                  <div class="flex items-center justify-between w-full h-full">
+                    <p class="text-black/55 text-[9px]">13:30 - 3 بهمن</p>
+                    <div class="space-x-1">
+                      <button class="text-[10px] font-light">ویرایش</button>
+                      <button class="text-[10px] font-light">حذف</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+          </div>
+        </div>
+        <!-- banner management -->
+        <div id="banner-panel" class="hidden w-full h-full grid grid-cols-6 gap-x-3">
+          <div class="col-span-3 h-full text-left">
+            <button class="text-sm font-light text-white rounded-xl mb-3 mt-2 bg-main-Purple px-8 py-1">افزودن
+              بنر</button>
+            <div class="bg-white p-2 pb-4 rounded-2xl shadow-admin">
+              <div class="relative w-full h-[170px] bg-black/25 rounded-xl mb-4">
+                <button class="absolute bg-main-Purple text-white p-2 rounded-full -left-1 -bottom-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-x-2 mb-4">
+                <input class="w-full px-4 py-4 rounded-xl text-sm border-1 border-black placeholder-black" type="text"
+                  placeholder="متن جایگزین">
+                <input class="w-full px-4 py-4 rounded-xl text-sm border-1 border-black placeholder-black" type="text"
+                  placeholder="لینک به صفحه ...">
+              </div>
+              <div class="space-x-6 text-right pr-5">
+                <button class="text-[13px] font-nor">حذف</button>
+                <button class="text-[13px] font-nor">انتشار</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-3 h-full bg-white rounded-2xl shadow-admin py-4 px-3 overflow-y-auto">
+            <div class="p-2 flex items-center justify-between gap-x-2 mb-6">
+              <div class="flex items-center justify-between w-4/6 pl-6">
+                <button class="text-[12px] font-light text-green-600">انتشار شده (5)</button>
+                <button class="text-[12px] font-light text-main-Purple">ذخیره شده (5)</button>
+                <button class="text-[12px] font-light text-red-600">حذف شده (5)</button>
+              </div>
+              <div class="bg-main-Purple w-2/6 rounded-xl px-3 py-2 flex items-center justify-between">
+                <input
+                  class="bg-main-Purple w-full text-sm font-light placeholder-white focus:outline-0 focus:ring-0 text-white"
+                  placeholder="جست و جو" />
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-5 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3 overflow-y-auto">
+              <div class="col-span-1 w-full h-[100px] bg-black/35 rounded-xl"></div>
+              <div class="col-span-1 w-full h-[100px] bg-black/35 rounded-xl"></div>
+              <div class="col-span-1 w-full h-[100px] bg-black/35 rounded-xl"></div>
+              <div class="col-span-1 w-full h-[100px] bg-black/35 rounded-xl"></div>
+              <div class="col-span-1 w-full h-[100px] bg-black/35 rounded-xl"></div>
+              <div class="col-span-1 w-full h-[100px] bg-black/35 rounded-xl"></div>
+              <div class="col-span-1 w-full h-[100px] bg-black/35 rounded-xl"></div>
+              <div class="col-span-1 w-full h-[100px] bg-black/35 rounded-xl"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ad req management -->
+        <div id="ad-req-panel" class="hidden w-full h-full grid grid-cols-3 gap-x-3">
+          <div class="col-span-2 h-full bg-white rounded-2xl shadow-admin py-4 px-3">
+            <div class="flex flex-col gap-y-4 mb-6">
+              <p class="text-[12px] font-light text-black/45">تاریخ ثبت درخواست : <span>22 بهمن 1403 - 23:00</span></p>
+              <div class="flex items-center gap-x-3 mb-4">
+                <img class="w-12 h-12 rounded-full object-center object-cover"
+                  src="../../assets/img/articles/article-img-1.png" alt="user img">
+                <div>
+                  <h5 class="text-sm font-bold">نام کاربری</h5>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-base font-bold">عنوان درخواست :
+                  <span class="text-sm font-normal pr-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                    چاپ</span>
+
+                </h3>
+              </div>
+            </div>
+            <div class="w-full h-[60%] border-1 border-black py-4 px-3 rounded-2xl">
+              <p class="text-sm font-semibold">درخواست مشاوره</p>
+            </div>
+          </div>
+
+          <div class="col-span-1 h-full bg-white rounded-2xl shadow-admin overflow-y-auto py-4 px-3">
+            <div class="p-2 flex items-center justify-between gap-x-2 mb-4">
+              <div class="flex items-center justify-between gap-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                </svg>
+                <h3 class="text-sm font-semibold">لیست درخواست ها</h3>
+              </div>
+            </div>
+            <div class="overflow-y-auto scrollbar-hidden">
+              <div>
+                <div class="w-full flex justify-between p-2 bg-green-500 rounded-2xl">
+                  <div>
+                    <div class="flex items-center space-x-2">
+                      <div>
+                        <img class="w-12 h-12 rounded-full" src="../../assets/img/articles/article-img-1.png" alt="">
+                      </div>
+                      <div>
+                        <h2 class="text-[11px] font-semibold">نام کاربری</h2>
+                        <p class="text-[10px] text-black/95 font-light">عنوان درخواست</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-2">
+                    <p class="text-[9px] text-black/45">13:30 - 3 بهمن</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- users management -->
+        <div id="users-panel" class="hidden grid grid-cols-3 w-full">
+          <div class="col-span-3 h-fit px-6 pt-3 mb-3 flex items-center justify-between">
+            <h5 class="text-base font-bold">کاربران سایت</h5>
+            <button class="flex items-center gap-x-3 bg-main-Purple text-white px-6 py-1 rounded-xl text-sm font-light">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+              </svg>
+              افزودن کاربر جدید
+            </button>
+          </div>
+          <div class="col-span-3 h-fit gap-x-4 mb-6">
+            <div class="grid grid-cols-3 w-full gap-x-3">
+              <div class="col-span-1 h-[120px] bg-white rounded-2xl flex items-center justify-center">
+                <div class="text-center space-y-2">
+                  <h3 class="font-bold">کاربران ثبت نام کرده</h3>
+                  <p class="text-main-Purple"><span>1,240</span>نفر</p>
+                </div>
+              </div>
+              <div class="col-span-1 h-[120px] bg-white rounded-2xl flex items-center justify-center">
+                <div class="text-center space-y-2">
+                  <h3 class="font-bold">کاربران ثبت نام کرده</h3>
+                  <p class="text-main-Purple"><span>1,240</span>نفر</p>
+                </div>
+              </div>
+              <div class="col-span-1 h-[120px] bg-white rounded-2xl flex items-center justify-center">
+                <div class="text-center space-y-2">
+                  <h3 class="font-bold">کاربران ثبت نام کرده</h3>
+                  <p class="text-main-Purple"><span>1,240</span>نفر</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-3 ">
+            <div
+              class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4">
+              <table class="w-full text-sm text-right overflow-y-auto">
+                <thead class="text-xs bg-white/25 rounded-tl-2xl rounded-tr-2xl">
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-center whitespace-nowrap">
+                      نام کاربری
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center whitespace-nowrap">
+                      موبایل
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center whitespace-nowrap">
+                      تاریخ پیوستن
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center whitespace-nowrap">
+                      وضعیت
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center whitespace-nowrap">
+                      ایمیل
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center whitespace-nowrap ">
+                      <div class="bg-main-Purple w-3/4 rounded-xl px-3 py-2 flex items-center justify-between">
+                        <input
+                          class="bg-main-Purple w-full text-sm font-light placeholder-white focus:outline-0 focus:ring-0 text-white"
+                          placeholder="جست و جو" />
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-5 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-smoky-white border-b-1 border-dark-smoky">
+                    <th scope="row" class="flex items-center px-4 py-2 text-black text-center whitespace-nowrap">
+                      <div class="flex items-center gap-x-2">
+                        <img class="w-12 h-12 object-center object-cover rounded-full"
+                          src="../../assets/img/articles/article-img-1.png" alt="">
+                        <div class="text-sm font-semibold">
+                          <h3>نام کاربر</h3>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      <div class="text-sm font-light text-gray-500 text-center">
+                        <h4>+989356571122</h4>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-sm font-semibold text-center text-black/80">
+                      23 مهر 1403
+                    </td>
+                    <td class="px-6 py-4 text-sm font-base text-center text-black/80">
+                      <span class="bg-green-400 px-4 py-1.5 rounded-xl">فعال</span>
+                    </td>
+                    <td class="px-6 py-4 text-sm font-base text-center text-black/80">
+                      example@gmail.com
+                    </td>
+                    <td class="px-6 py-4 text-sm font-base text-black/80 ">
+                      <div class="flex items-center justify-center text-center">
+                        <button class="text-white bg-main-Purple px-2 py-1 rounded-lg text-sm font-light">حذف</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="/js/lib/flowbite/flowbite.min.js"></script>
+  <script type="module" src="/js/panel/main.js"></script>
+</body>
+</html>
