@@ -49,13 +49,14 @@ document.getElementById("login_form").addEventListener("submit", async function 
         setTimeout(() => {
             window.location.href = "index.html";
         } , 2000)
+    }else{
+      document.getElementById("dan_status").textContent = result.message;
+      document.getElementById("dan_status").classList.remove("translate-x-[150%]");
     }
 
     // Handle errors from API
     if (!result.success) {
         if (result.errorType === "validation" || result.errorType === "unauthorized") {
-          document.getElementById("dan_status").textContent = result.message;
-          document.getElementById("dan_status").classList.remove("translate-x-[150%]");
             nameError.textContent = result.message;
             nameError.classList.remove("hidden");
         }

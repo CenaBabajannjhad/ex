@@ -95,13 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // If the form is valid, proceed with signup
     if (isValid) {
       const result = await signup(userData);
-      alert(result.message);
-
+      
       if (result.success) {
+        document.getElementById("suc_status").textContent = result.message;
+        document.getElementById("suc_status").classList.remove("translate-x-[150%]")
         setCookie("userSignin" , "true")
         setLocalStorage("userData", { userName, userPassword });
         signupForm.reset(); // Reset form on successful registration
         window.location.href = "login.html"
+      }else{
+        document.getElementById("dan_status").textContent = result.message;
+        document.getElementById("dan_status").classList.remove("translate-x-[150%]")
+        setTimeout(() => {
+          document.getElementById("dan_status").classList.add("translate-x-[150%]")
+        }, 2000);
       }
     }
   });
