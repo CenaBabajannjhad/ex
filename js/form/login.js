@@ -44,6 +44,8 @@ document.getElementById("login_form").addEventListener("submit", async function 
     // Send login request
     const result = await loginUser({ username, password });
     if(result.success){
+      document.getElementById("suc_status").textContent = result.message;
+      document.getElementById("suc_status").classList.remove("translate-x-[150%]");
         setTimeout(() => {
             window.location.href = "index.html";
         } , 2000)
@@ -52,10 +54,10 @@ document.getElementById("login_form").addEventListener("submit", async function 
     // Handle errors from API
     if (!result.success) {
         if (result.errorType === "validation" || result.errorType === "unauthorized") {
+          document.getElementById("dan_status").textContent = result.message;
+          document.getElementById("dan_status").classList.remove("translate-x-[150%]");
             nameError.textContent = result.message;
             nameError.classList.remove("hidden");
-        } else {
-            alert(result.message);
         }
         return;
     }
@@ -64,10 +66,9 @@ document.getElementById("login_form").addEventListener("submit", async function 
     setCookie("token", result.token);
 });
 
-
 async function loginUser({ username, password }) {
     try {
-      const response = await fetch("/api/auth/login", {
+      const response = await fetch("https://api.exiness.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

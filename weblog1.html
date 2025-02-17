@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/flowbite.min.css" />
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <header class="shadow-header bg-white sticky top-0 z-50">
+        <div class="container flex items-center justify-between py-[20px]">
+            <!-- brand -->
+            <section class="order-2 col-span-2 lg:col-span-1 lg:order-1 grid place-items-center">
+                <a href="/index.html" itemprop="url">
+                    <img class="w-[140px] md:w-[180px]" src="/assets/img/logo/EXINESS.png" alt="exiness logo" />
+                </a>
+            </section>
+            <!-- navbar -->
+            <nav id="navbar"
+                class="lg:col-span-2 shadow-2xl duration-400 lg:duration-0 translate-x-[120%] z-50 fixed top-0 md:-right-4 -right-2 bottom-0 h-full w-[50%] md:w-[30%] rounded-tl-full rounded-bl-full border-8 border-white bg-main-Purple lg:translate-0 lg:w-auto lg:bg-transparent lg:shadow-none lg:order-2 lg:static">
+                <!-- close menu button -->
+                <section class="lg:hidden relative top-[45%] -translate-y-1/2">
+                    <button id="close__button"
+                        class="absolute -left-8 lg:hidden cursor-pointer p-5 bg-main-Purple rounded-tl-full rounded-bl-full flex items-center justify-center">
+                        <img class="w-[30px] h-[30px]" src="/assets/img/icons/header/close.png" alt="close button" />
+                    </button>
+                </section>
+                <ul
+                    class="text-md pr-6 pl-8 pt-32 lg:pr-0 lg:pl-0 lg:px-0 lg:pt-0 lg:flex lg:items-center lg:justify-center lg:gap-x-8">
+                    <li class="lg:hidden mb-10">
+                        <a href="mainSection">
+                            <img class="w-[130px]" src="/assets/img/logo/EXINESS.png" alt="exiness logo" />
+                        </a>
+                    </li>
+                    <li class="text-white my-7 lg:my-0 lg:text-black">
+                        <div class="flex items-center gap-x-3 lg:block pb-6 lg:pb-0">
+                            <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/home.png" alt="home icon" />
+                            <a href="#">صفحه اصلی</a>
+                        </div>
+                        <span class="lg:hidden block w-full h-[4px] bg-gradient-to-r from-white/0 to-white"></span>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/star.png" alt="star icon" />
+                        <a href="#collaborate">همکاران</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/about.png" alt="about icon" />
+                        <a href="#about">درباره ما</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/archive.png"
+                            alt="archive icon" />
+                        <a href="#services">خدمات</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/blogs.png" alt="blogs icon" />
+                        <a href="../src/pages/blogsPage.html">وبلاگ</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/contact.png"
+                            alt="contact icon" />
+                        <a href="#">تماس با ما</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- actions -->
+            <section class="order-3 lg:order-3 col-span-1">
+                <div class="flex justify-end space-x-2">
+                    <a href="/signup.html" rel="nofollow"
+                        class="cursor-pointer bg-main-Purple text-sm lg:text-base text-smoky-white px-2.5 py-1 md:px-5 md:py-2 lg:px-8 lg:py-3.5 rounded-4xl">
+                        ثبت نام
+                    </a>
+                    <a href="/login.html" rel="nofollow"
+                        class="cursor-pointer bg-very-light-purple text-sm lg:text-base text-main-Purple border-1 border-dark-smoky px-2.5 py-1 md:px-5 md:py-2 lg:px-8 lg:py-3.5 rounded-4xl">
+                        ورود
+                    </a>
+                </div>
+            </section>
+            <!-- hamburger menu -->
+            <section class="lg:hidden order-1 text-base/1">
+                <button id="menu__button" class="space-y-1 md:space-y-1.5 cursor-pointer">
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                </button>
+            </section>
+        </div>
+    </header>
+    <article>
+        <section>
+            <div class="relative w-full h-[600px] lg:h-[400px] bg-center bg-cover bg-[url(/assets/img/articles/article-img-3.jpg)]">
+                <div class="absolute z-[2] py-12 inset-0 bg-black/25 backdrop-blur-md text-white"></div>
+                <div class="absolute h-full z-[5] px-22 w-full grid grid-cols-1 lg:grid-cols-3 items-center justify-between">
+                    <div class="lg:text-center">
+                        <div class="flex items-center pt-6 lg:pt-0 justify-center">
+                            <img class="max-w-[340px] rounded-2xl shadow-2xl" src="/assets/img/articles/article-img-3.jpg" alt="blog img">
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex flex-col justify-between w-full h-full pt-4 lg:pt-16 lg:pr-18">
+                        <div class="mb-4 lg:mb-0">
+                            <h1 class="text-white font-bold text-xl lg:text-3xl text-center lg:text-right mb-4 lg:mb-6">مشاوره کسب و کار : راهنمایی برای موفقیت و رشد </h1>
+                            <!-- <p class="text-white font-normal text-base lg:text-lg text-center lg:text-right lg:mx-none lg:w-2/3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p> -->
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start lg:items-right w-full gap-x-8 pb-14">
+                            <h6 class="text-white flex items-center gap-x-2 text-xs">
+                                <span>
+                                    <img class="w-4 lg:w-5" src="/assets/img/icons/calender.png" alt="calender icon">
+                                </span>
+                                21 بهمن 1403
+                            </h6>
+                            <h6 class="text-white flex items-center gap-x-2 text-xs">
+                                <span>
+                                    <img class="w-4 lg:w-5" src="/assets/img/icons/watch.png" alt="watch icon">
+                                </span>
+                                6 دقیقه
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container pt-18 mb-32">
+                <h2 class="text-xl font-bold mb-4">به نظرتان یک بیزینس چگونه میتواند رشد کند؟ و نقش یک مشاور کسب و کار در آن چیست؟</h2>
+                <h2 class="text-xl font-normal mb-12 pr-4">راه های موفقیت و رشد، بسیارند. هر تغییر کوچک در کسب و کار شما، میتواند اثری بزرگ برای بخش داخلی و خارجی سازمان تان بگذارد. بنابراین، بسیاری از تغییرات در سازمان اگر از پیش سنجیده نشده باشند، میتوانند موجب افول بیزینس شما شوند.</h2>
+                <h2 class="text-xl font-bold mb-4">نقش یک مشاوره کسب و کار زمانی مهم میشود که دو عامل حیاتی میشوند:</h2>
+
+                <ol class="list-decimal pr-8 space-y-2 mb-12">
+                    <li class="text-xl font-normal">نیاز به تخصص و تجربه ی بالا</li>
+                    <li class="text-xl font-normal">نیاز به نگاه بیرونی به سازمان و تشخیص درست فرصت ها و محدودیت ها</li>
+                </ol>
+                <p class="text-xl font-normal mb-12">و در نتیجه، تمام این عوامل به ظاهر ساده اما کاربردی، میتوانند اهمیت یک مشورت پربار در حوزه های مختلف را برای رشد و شکوفایی سازمان تان، نشان دهند.</p>
+
+                <h2 class="text-2xl font-bold mb-4">مشاوره کسب و کار چیست؟ </h2>
+                <p class="pr-4 mb-5 text-xl font-normal">مشاوره کسب و کار، به معنی گرفتن مشورت و راهنمایی در زمینه های تخصصی مرتبط به رشد بیزینس شما خواهد بود، مانند زمانی که شما برای استخدام یک کارمند خوب نمیدانید از میان گزینه های موجود کدام یک را انتخاب کنید، یا در خصوص آینده ی کسب و کارتان نمیدانید برای رسیدن به چشم انداز نیاز است چه مراحلی را طی کنید و... .</p>
+                <p class="pr-4 mb-5 text-xl font-normal">در حقیقت مشاوره تخصصی بیزینس، به شما در دیدن هرچه واضح تر مسیر و برنامه ریزی در زمینه های گوناگون کمک خواهد کرد و باعث بهبود تصمیم گیری های شما، به دلیل مشورت با افراد خبره و باتجربه میگردد.</p>
+                <p class="pr-4 mb-5 text-xl font-normal">در حقیقت مشاوره تخصصی بیزینس، به شما در دیدن هرچه واضح تر مسیر و برنامه ریزی در زمینه های گوناگون کمک خواهد کرد و باعث بهبود تصمیم گیری های شما، به دلیل مشورت با افراد خبره و باتجربه میگردد.</p>
+                <p class="pr-4 mb-12 text-xl font-normal">بدین ترتیب، شما میتوانید تمامی منابع خود را به درستی مدیریت کنید و در میان رقبا، متفاوت تر عمل کنید.</p>
+
+                <h2 class="text-2xl font-bold mb-4">خدمات مشاوره کسب و کار که باید بشناسید </h2>
+                <p class="pr-4 mb-5 text-xl font-normal">در هر فعالیتی، فرآیندهای مختلفی وجود دارد و این مورد در بیزینس از اهمیت بالاتری برخوردار است، چراکه سرمایه های شما در هر بخشی میتوانند به سادگی در معرض خطر قرار گیرند.</p>
+                <p class="pr-4 mb-5 text-xl font-normal">برای مثال، اگر شما نتوانید منابع انسانی خود را به درستی گزینش کنید، رفتار و فعالیت آنان میتواند باعث ضربه زدن به فروش تان، مشتریان وفادار شما، مشکلات درون سازمانی فراوان و درنتیجه کاهش فروش شما شود و کاهش فروش خود به تنهایی میتواند تمام کسب و کارتان را تحت تاثیر قرار دهد.</p>
+                <p class="pr-4 mb-7 text-xl font-normal">بنابراین خدمات مشاوره کسب و کار، میتوانند در دسته های مختلفی باشند که ها کدام به تنهایی میتواند شما را به رشد بسیار و یا برعکس آن، دره ی ورشکستگی برساند</p>
+                <p class="pr-4 text-xl font-normal mb-12">در اینجا با برخی از مهمترین خدمات مشاوره آشنا میشوید:</p>
+
+                <h3 class="text-2xl font-bold mb-4">مشاوره برای شناسایی بازار هدف   </h3>
+                <p class="pr-4 text-xl font-normal mb-12">یکی از مفیدترین مشورت ها، شناخت درست بازار هدف است. این مرحله تنها به بعد از محصول برنمیگردد، بلکه قبل از حتی ساخت و ایجاد یک محصول میتوان در این زمینه مشورت گرفت و سپس به سمت تولید و یا فروش محصولات رفت. بدین ترتیب، دیگر شما نگرانی از بابت شناخت درست بازار هدف و داشتن استراتژی های لازم برای فروش نخواهید داشت</p>
+
+                <h3 class="text-2xl font-bold mb-4">مدیریت بودجه و منابع مالی</h3>
+                <p class="pr-4 text-xl font-normal mb-4">ممکن است فکر کنید برای مدیریت بودجه و منابع مالی، یک حسابدار برای شرکت شما کافی است، اما اینطور نیست!</p>
+                <p class="pr-4 text-xl font-normal mb-4">اگر شما به درستی پتانسیل های مجموعه ی خود را نشناسید، منابع مالی را به درستی مدیریت نکنید و برای مدیریت بودجه صرفا بدون علم و دانش پیش بروید، ممکن است در زمینه های مالی به درستی نتوانید عمل کنید.</p>
+                <p class="pr-4 text-xl font-normal mb-12">یکی از خدمات مشاوره کسب و کار در خصوص مدیریت دارایی و منابع مالی است که به شما کمک میکند با بهترین روند، منابع خود را مدیریت، کنترل یا سرمایه گذاری کنید.</p>
+
+                <h3 class="text-2xl font-bold mb-4">مشاوره برای کاهش هزینه‌ها</h3>
+                <p class="pr-4 text-xl font-normal mb-12">بسیاری از روش ها، فرآیندها و روندها میتوانند آسان تر پیش بروند، اما ممکن است افرادی نسبت به آن مطلع نباشند. تغییر رویکرد یک شرکت از سنتی به مدرن، گاهی باعث افزایش هزینه و گاهی باعث کاهش هزینه های شما میشود. اینکه بتوانید به درستی راجب آن تصمیم بگیرید بسیار مهم میباشد. مشاوران کسب و کار در این زمینه میتوانند به شما راهکارهایی را ارائه دهند که شاهد مدیریت درست هزینه ها و کاهش آن باشید</p>
+                
+                <h3 class="text-2xl font-bold mb-4">جذب مشتریان جدید   </h3>
+                <p class="pr-4 text-xl font-normal mb-12">داشتن یک راهنمای مسیر، میتواند به شما در جذب مشتریان جدید کمک کند. مشاوران بازاریابی میتوانند در شناخت بازار، مشخص کردن بازار هدف و تعیین بهترین شیوه برای فروش به آنان میتوانند به شما کمک کنند</p>
+
+                <h3 class="text-2xl font-bold mb-4">تبلیغات و برندینگ </h3>
+                <p class="pr-4 text-xl font-normal mb-4">بدون تبلیغات و ایجاد یک برند درست، مسیر شما مشکل تر میشود! اما چگونه میتوان به درستی برای این دو مورد اقدام کرد؟ </p>
+                <p class="pr-4 text-xl font-normal mb-12">مشاوران کسب و کار در این زمینه نیز میتوانند به شما کمک کرده و چشم انداز درستی از برندینگ شما و تبلیغات درست ارائه دهند</p>
+
+                <h3 class="text-2xl font-bold mb-4">بهترین خدمات مشاوره کسب و کار برای موفقیت بلندمدت </h3>
+                <p class="pr-4 text-xl font-normal mb-12">مهمترین مورد در دریافت خدمات مشاوره کسب و کار، رسیدن شما به موفقیت در طی گذر زمان و پایدار ماندن در آن است. خدمات متفاوتی هستند که میتوانند شما را به این اهداف برسانند، اما در اینجا به برخی از مهمترین آنان اشاره میشود</p>
+
+                <h3 class="text-2xl font-bold mb-4">مشاوره استراتژیک برای رشد پایدار   </h3>
+                <p class="pr-4 text-xl font-normal mb-12">خدمات مشاوره استراتژیک همانطور که گفته شد، میتواند به شما یک مسیر کامل را نشان دهد و چرایی و چگونگی را به آسانی برای شما مشخص کرد. بدین ترتیب، رشد شما به صورت پایدار و به طور صحیح پیش خواهد رفت و موفقیت های شما در طی زمان طولانی تر نیز باقی خواهد ماند</p>
+
+                <h3 class="text-2xl font-bold mb-4">مشاوره مالی برای بهبود وضعیت مالی   </h3>
+                <p class="pr-4 text-xl font-normal mb-4">یکی از المان های مهم برای هر کسب و کاری، رشد در مسائل مالی میباشد. اگر برای این مورد برنامه ی بلندمدتی نداشته باشید، پس ممکن است در میان رقبا بازنده شوید.</p>
+                <p class="pr-4 text-xl font-normal mb-12">هرگز فراموش نکنید که شما باید تحت هر شرایطی بیزینس تان را رشد دهید و رشد کنید و این کاری ست که یک مشاوره میتواند به سادگی برایتان انجام دهد.</p>
+
+
+                <h3 class="text-2xl font-bold mb-4">مشاوره بازاریابی برای ورود به بازارهای جدید </h3>
+                <p class="pr-4 text-xl font-normal mb-12">موفقیت بلند مدت بدون توسعه، مگر میشود؟! شناخت درست بازار و راهنمایی های یک مشاور به شما کمک خواهد کرد تا در بخش های مختلف و لاین های متفاوت خود، رشد را افزایش و یا حتی ایجاد کنید</p>
+
+                <h3 class="text-2xl font-bold mb-4">چگونه مشاوره کسب و کار را انتخاب کنیم؟  </h3>
+                <p class="pr-4 text-xl font-normal mb-12">برای انتخاب یک مشاور کسب و کار، مهم است که از میان گزینه های  موجود به عواملی همچون تجربه، تخصص و میزان سابقه ی موفقیت مشاور توجه کنید. مشاوران، افرادی هستند که با دید تخصصی خود، میتوانند به شیوه ای متفاوت کسب و کار شما را نگاه کرده و با علم و دانش و تجربه ی خود، آن را به سمت توسعه ببرند. بنابراین، انتخاب فرد یا شرکتی که بتواند نتایج را برای شما تضمین کند بسیار مهم و حیاتی میباشد</p>
+
+
+                <h3 class="text-2xl font-bold mb-4">تاثیر مشاوره کسب و کار بر رشد و موفقیت شرکت‌ها </h3>
+                <p class="pr-4 text-xl font-normal mb-12">خدمات مشاوره کسب و کار، میتواند در وهله ی اول باعث ثبات در عملکرد صحیح و در درجات بعدی باعث توسعه ی توانمندی ها، استراتژی ها، رضایت مشتریان و افزایش میزان سهم شما در بازار، بهبود عملکرد های مالی صحیح و درنهایت افزایش بهره وری از تمام جنبه ها باشد.</p>
+
+                <h3 class="text-2xl font-bold mb-4">چگونه از مشاوره کسب و کار بهره‌برداری کنیم؟ </h3>
+                <p class="pr-4 text-xl font-normal mb-12">مسیر دریافت مشاوره تا رسیدن به نتیجه، مسیری ست که میتواند ضامن موفقیت شما باشد. برای گرفتن خروجی های متعدد در مسیر کسب و کار، شما باید از خدمات مشاوره کسب و کار به خوبی استفاده کرده و حتما با مشاورین حرفه ای و با تجربه همکاری کنید</p>
+                <p class="pr-4 text-xl font-normal mb-4">مشاوره ،میتواند در تمام زمینه های کسب و کارتان، چاره ساز باشد، پس با نگاه حرفه ای و ارزش گذاری بر روی کسب و کارتان، سعی کنید برای تمام جنبه های آن از راهنمایی های تخصصی بیزینس استفاده کنید تا در میان رقبا درخشان باشید</p>
+
+                <h3 class="text-2xl font-bold mb-4">مشاوره کسب و کار اکسینس: بهترین انتخاب برای رشد شما </h3>
+                <p class="pr-4 text-xl font-normal mb-4">در شرکت اکسینس، ما در تمامی زمینه های موجود در یک کسب و کار، میتوانیم مشاوره های لازم را ارائه داده و شما را از سایر خدمات مشاوره بی نیاز کنیم</p>
+                <p class="pr-4 text-xl font-normal mb-4">در اکسینس تفاوتی میان یک بیزینس بزرگ با یک کسب و کاری که تازه راه اندازی شده نیست. حتی به عقیده ی ما، یک مغازه ی کوچک نیز میتواند روزی یک فروشگاه بزرگ شود، اگر به درستی مسیر صحیحی را طی کند.</p>
+                <p class="pr-4 text-xl font-normal mb-4">همچنین برای دریافت خدمات مشاوره از اکسینس، شما میتوانید برنامه ی شخصی سازه ی خود را دریافت کنید و بسته به نوع کسب و کار، نیازتان و اهداف و چالش های پیش رو، از مشاوره ی کاملا شخصی سازی شده بهره ببرید.</p>
+                <p class="pr-4 text-xl font-normal mb-4">همچنین بزرگ ترین تعهد ما کمک به رشد شما و بزرگ ترین ضمانت ما، دیدن رشد شماست. برای دیدن این رشد بزرگ، ما تیمی از متخصصین حرفه ای و با تجربه در زمینه های مختلف را جمع آوری کرده تا هر کدام با نگاهی ویژه به وضعیت فعلی و آینده ی محتمل، بهترین راهکارها را ارائه دهند و موفقیت شما، تضمین شده باشد</p>
+
+                <h3 class="text-2xl font-bold mb-4">دسته بندی ریز کلیدی مشاوره کسب و کار  </h3>
+                <p class="pr-4 text-xl font-normal mb-4">کدام مشورت ها برای کسب و کارتان مفید است؟ پاسخ این سوال نیاز به بررسی کامل بیزینس شما و اهدافی که برای آن در سر دارید، خواهد داشت. اما از کلیدی ترین مشاوره ها یا نیازهای کسب و کار که باید همواره به آن توجه کرد، میتوان به مشاوره مالی برای کسب و کارهای کوچک، مشاوره </p>
+                <p class="pr-4 font-normal mb-12">استراتژیک برای مشاغل در حال رشد و مشاوره بازاریابی برای برندهای نوپا اشاره کرد. هر کدام از این دسته ها در زمان مناسب، میتوانند یک کلید طلایی در دستان شما باشند.</p>
+
+                <h3 class="text-2xl font-bold mb-4">جمع‌بندی و نتیجه‌گیری </h3>
+                <p class="pr-4 text-xl font-normal mb-4">مشورت همیشه میتواند به شما نگاهی تازه دهد. این نگاه، میتواند عاملی باشد که شما و شرایط را از وضع موجود خارج و به سمت رشد بیشتر سوق دهد. در سازمان ها، کسب و کارهای در حال رشد و یا حتی ایده هایی که نیاز دارند تبدیل به یک برند بزرگ شوند، راهنمایی های موثر از افراد باتجربه میتواند بسیار اهمیت داشته باشد. مشاوران حرفه ای میتوانند این مسیر را برای شما هموار کرده و همگام با شما برای رشدتان باشند</p>
+                <p class="pr-4 text-xl font-normal mb-4">خدمات مشاوره کسب و کار اکسینس، تمام نیازهای یک بیزینس را میتواند پوشش دهد و در عملکرد مجموعه های تازه تاسیس، شرکت های مستعد رشد و یا حتی ایده هایی که نیاز به شکوفا شدن دارند، تاثیر بسزایی بگذارد و آنان را به سمت آینده ای درخشان، راهنمایی کند</p>
+            </div>
+        </section>
+        <section>
+            <div class="container mb-18">
+                <div class="flex items-center gap-x-4 mb-4">
+                    <img class="w-6" src="../../assets/img/icons/comments.png" alt="comments icon">
+                    <h5 class="text-main-Purple text-xl font-black">نظرات شما</h5>
+                    <p class="text-main-Purple text-base font-normal">5 نظر</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 lg:gap-y-0 px-6 lg:px-18 gap-x-8">
+                    <div class="w-full shadow-main pl-4 py-2 lg:px-6 lg:py-4 rounded-xl bg-white">
+                        <div class="grid grid-cols-3">
+                            <div class="col-span-1">
+                                <div class="w-fit flex flex-col items-center gap-y-2">
+                                    <img class="w-12 h-12 lg:w-22 lg:h-22 rounded-2xl object-center object-cover" src="/assets/img/articles/article-img-1.png" alt="user img">
+                                    <div class="pr-2">
+                                        <h3 class="text-main-Purple font-semibold text-sm lg:text-lg text-center">نام کاربری</h3>
+                                        <p class="text-main-Purple font-normal text-[12px] lg:text-sm">21 بهمن 1403</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-2 flex flex-col items-end justify-between">
+                                <p class="font-normal text-[11px] lg:text-sm mb-3 lg:mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+
+                                <div class="flex items-center gap-x-4">
+                                    <p class="text-main-Purple text-[11px] lg:text-sm">3 پاسخ</p>
+                                    <button class="text-white bg-main-Purple text-[11px] lg:text-sm font-normal px-2 lg:px-4 py-1 rounded-lg">پاسخ به این نظر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full shadow-main pl-4 py-2 lg:px-6 lg:py-4 rounded-xl bg-white">
+                        <div class="grid grid-cols-3">
+                            <div class="col-span-1">
+                                <div class="w-fit flex flex-col items-center gap-y-2">
+                                    <img class="w-12 h-12 lg:w-22 lg:h-22 rounded-2xl object-center object-cover" src="/assets/img/articles/article-img-1.png" alt="user img">
+                                    <div class="pr-2">
+                                        <h3 class="text-main-Purple font-semibold text-sm lg:text-lg text-center">نام کاربری</h3>
+                                        <p class="text-main-Purple font-normal text-[12px] lg:text-sm">21 بهمن 1403</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-2 flex flex-col items-end justify-between">
+                                <p class="font-normal text-[11px] lg:text-sm mb-3 lg:mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+
+                                <div class="flex items-center gap-x-4">
+                                    <p class="text-main-Purple text-[11px] lg:text-sm">3 پاسخ</p>
+                                    <button class="text-white bg-main-Purple text-[11px] lg:text-sm font-normal px-2 lg:px-4 py-1 rounded-lg">پاسخ به این نظر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mb-18">
+                <form action="#">
+                    <h3 class="text-main-Purple font-extrabold text-xl mb-4">نظر خودتان را در مورد این مقاله بیان کنید: </h3>
+
+                    <div class="w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-4 pb-4 lg:pb-0">
+                            <div class="col-span-1">
+                                <label class="sr-only" for="userName">نام </label>
+                                <input class="w-full py-4 placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" type="text" placeholder="نام را وارد کنید">
+                            </div>
+                            <div class="lg:col-span-2">
+                                <label class="sr-only" for="userName">نام </label>
+                                <input class="w-full py-4 placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" type="text" placeholder="ایمیل را وارد کنید">
+                            </div>
+                            <div class="lg:col-span-3">
+                                <textarea placeholder="نظرتان را وارد کنید" class="h-[180px]  max-h-[180px] pt-4 border-none w-full placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" name="comment" id="comment"></textarea>
+                            </div>
+                        </div>
+
+                        <button class="text-white bg-main-Purple px-12 py-3 rounded-xl lg:w-fit w-full">ارسال نظر</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="bg-pastel-purple rounded-tr-4xl rounded-tl-4xl px-10 pt-9 lg:pt-14">
+                <!-- header -->
+                <section class="flex flex-col lg:flex-row items-center justify-between lg:mb-20 mb-6">
+                    <div class="mb-8 lg:mb-0">
+                        <a href="#">
+                            <img class="w-[140px] md:w-[160px] lg:w-[180px]" src="/assets/img/logo/EXINESS.png"
+                                alt="exiness logo" />
+                        </a>
+                    </div>
+                    <div class="mb-6 lg:mb-8 w-full text-center lg:hidden">
+                        <span class="block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+                    <nav class="mb-6 lg:mb-0">
+                        <ul
+                            class="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-5 xl:space-x-7">
+                            <li>
+                                <a class="text-base" href="#">صفحه اصلی</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">خدمات</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">نمونه کار</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">وبلاگ</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">درباره ما</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">تماس با ما</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="mb-6 lg:mb-8 w-full text-center lg:hidden">
+                        <span class="block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+                    <div class="hidden lg:flex items-center lg:space-x-3 xl:space-x-4">
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                    </div>
+                </section>
+
+
+                <!-- info and form section -->
+                <section class="pb-14">
+                    <div class="mb-6 lg:mb-8">
+                        <span
+                            class="hidden lg:inline-block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+
+                    <div class="lg:flex lg:justify-between lg:items-center">
+                        <div class="space-y-4 mb-6">
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">آدرس
+                                : البرز، کرج،
+                                گلشهر، بلوار
+                                مصطفی خمینی، مجتمع کسری، واحد 25 ، پلاک7612</p>
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">ایمیل
+                                :
+                                infoexiness@gmail.com
+                            </p>
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">تماس
+                                : 09365008696
+                            </p>
+                            <div class="flex items-center justify-center space-x-2 lg:space-x-6 lg:hidden">
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                            </div>
+                        </div>
+
+                        <form action="#" class="lg:ml-24">
+                            <div
+                                class="grid grid-cols-3 gap-x-2 py-3 px-4 lg:px-8 lg:py-12 bg-white rounded-2xl sm:w-8/12 lg:w-auto sm:mx-auto">
+                                <div class="col-span-2">
+                                    <input
+                                        class="w-full h-full bg-white px-2 lg:px-4 py-2 lg:py-4 border-1 border-black text-sm lg:text-base font-normal rounded-lg"
+                                        type="text" placeholder="ایمیل">
+                                </div>
+                                <div class="col-span-1">
+                                    <button
+                                        class="w-full h-full lg:text-base text-sm font-semibold bg-main-Purple text-white rounded-lg">ارسال
+                                        پیام</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!-- exiness -->
+                <section class="pb-4 lg:pb-8">
+                    <h3 class="text-center border-b-1 border-black font-bold text-[13px] lg:text-xl pb-2">
+                        اکسینس تحولی در بـیزنس | EXINESS Revelotion In Business
+                    </h3>
+                </section>
+                <!-- copyright -->
+                <section class="flex items-center justify-center gap-x-4 pb-3 lg:pb-4 text-center">
+                    <p class="font-normal text-[10px] lg:text-sm">Privacy Policy</p>
+                    <p class="font-normal text-[10px] lg:text-sm">
+                        © 2023 EXINESS. All Rights Reserved.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/js/main.js"></script>
+    <script src="/js/lib/flowbite/flowbite.min.js"></script>
+</body>
+
+</html>

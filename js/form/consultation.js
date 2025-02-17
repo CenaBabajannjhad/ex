@@ -33,7 +33,7 @@ document.getElementById('request-form').addEventListener('submit', function (eve
         };
 
         // Assuming the user is logged in and the token is stored in a cookie
-        const token = getCookie('authToken'); // You should have a valid auth token set when the user is logged in
+        const token = getCookie('token'); 
 
         if (token) {
             submitConsultationRequest(requestData, token);
@@ -47,11 +47,11 @@ document.getElementById('request-form').addEventListener('submit', function (eve
 
 async function submitConsultationRequest(requestData, token) {
     try {
-        const response = await fetch("/api/consultation-requests", {
+        const response = await fetch("https://api.exiness.com/api/consultation-requests", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`  // Add token in Authorization header
+                "Authorization": `Bearer ${token}`
             },
             body: JSON.stringify(requestData)
         });
@@ -60,7 +60,7 @@ async function submitConsultationRequest(requestData, token) {
             // Successfully created consultation request
             document.querySelector("#suc_status").classList.remove("translate-x-[150%]");
             setTimeout(() => {
-                window.location.href = "thank-you.html"; // Redirect to a success page or thank you page
+                window.location.href = "index.html"; 
             }, 2000);
         } else if (response.status === 400) {
             // Handle invalid request

@@ -84,9 +84,27 @@
 
     </div>
   </div>
+ 
 
+  <div id="suc_status" class="fixed top-3 right-3 z-50 translate-x-[150%] transition-transform flex items-center p-4 mb-4 text-sm border-2 bg-green-100/25 border-green-400 text-green-400 rounded-2xl" role="alert">
+    <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+    </svg>
+    <span class="sr-only">Info</span>
+    <div>
+      <span class="font-extrabold">ثبت نام موفقیت آمیز بود</span>
+    </div>
+  </div>
 
-  
+  <div id="dan_status" class="fixed top-3 right-3 z-50 translate-x-[150%] transition-transform flex items-center p-4 mb-4 text-sm border-2 bg-red-100/25 border-red-700 text-red-700 rounded-2xl" role="alert">
+    <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+    </svg>
+    <span class="sr-only">Info</span>
+    <div>
+      <span class="font-extrabold">ثبت نام موفقیت آمیز نبود</span>
+    </div>
+  </div>
   <script type="module" src="/js/form/login.js"></script>
   <script src="/js/form/util/inputTypeHnadler.js"></script>
 </body>

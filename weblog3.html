@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/flowbite.min.css" />
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <header class="shadow-header bg-white sticky top-0 z-50">
+        <div class="container flex items-center justify-between py-[20px]">
+            <!-- brand -->
+            <section class="order-2 col-span-2 lg:col-span-1 lg:order-1 grid place-items-center">
+                <a href="index.html" itemprop="url">
+                    <img class="w-[140px] md:w-[180px]" src="/assets/img/logo/EXINESS.png" alt="exiness logo" />
+                </a>
+            </section>
+            <!-- navbar -->
+            <nav id="navbar"
+                class="lg:col-span-2 shadow-2xl duration-400 lg:duration-0 translate-x-[120%] z-50 fixed top-0 md:-right-4 -right-2 bottom-0 h-full w-[50%] md:w-[30%] rounded-tl-full rounded-bl-full border-8 border-white bg-main-Purple lg:translate-0 lg:w-auto lg:bg-transparent lg:shadow-none lg:order-2 lg:static">
+                <!-- close menu button -->
+                <section class="lg:hidden relative top-[45%] -translate-y-1/2">
+                    <button id="close__button"
+                        class="absolute -left-8 lg:hidden cursor-pointer p-5 bg-main-Purple rounded-tl-full rounded-bl-full flex items-center justify-center">
+                        <img class="w-[30px] h-[30px]" src="/assets/img/icons/header/close.png" alt="close button" />
+                    </button>
+                </section>
+                <ul
+                    class="text-md pr-6 pl-8 pt-32 lg:pr-0 lg:pl-0 lg:px-0 lg:pt-0 lg:flex lg:items-center lg:justify-center lg:gap-x-8">
+                    <li class="lg:hidden mb-10">
+                        <a href="mainSection">
+                            <img class="w-[130px]" src="/assets/img/logo/EXINESS.png" alt="exiness logo" />
+                        </a>
+                    </li>
+                    <li class="text-white my-7 lg:my-0 lg:text-black">
+                        <div class="flex items-center gap-x-3 lg:block pb-6 lg:pb-0">
+                            <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/home.png" alt="home icon" />
+                            <a href="#">صفحه اصلی</a>
+                        </div>
+                        <span class="lg:hidden block w-full h-[4px] bg-gradient-to-r from-white/0 to-white"></span>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/star.png" alt="star icon" />
+                        <a href="#collaborate">همکاران</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/about.png" alt="about icon" />
+                        <a href="#about">درباره ما</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/archive.png"
+                            alt="archive icon" />
+                        <a href="#services">خدمات</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/blogs.png" alt="blogs icon" />
+                        <a href="../src/pages/blogsPage.html">وبلاگ</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/contact.png"
+                            alt="contact icon" />
+                        <a href="#">تماس با ما</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- actions -->
+            <section class="order-3 lg:order-3 col-span-1">
+                <div class="flex justify-end space-x-2">
+                    <a href="/signup.html" rel="nofollow"
+                        class="cursor-pointer bg-main-Purple text-sm lg:text-base text-smoky-white px-2.5 py-1 md:px-5 md:py-2 lg:px-8 lg:py-3.5 rounded-4xl">
+                        ثبت نام
+                    </a>
+                    <a href="/login.html" rel="nofollow"
+                        class="cursor-pointer bg-very-light-purple text-sm lg:text-base text-main-Purple border-1 border-dark-smoky px-2.5 py-1 md:px-5 md:py-2 lg:px-8 lg:py-3.5 rounded-4xl">
+                        ورود
+                    </a>
+                </div>
+            </section>
+            <!-- hamburger menu -->
+            <section class="lg:hidden order-1 text-base/1">
+                <button id="menu__button" class="space-y-1 md:space-y-1.5 cursor-pointer">
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                </button>
+            </section>
+        </div>
+    </header>
+    <article>
+        <section>
+            <div class="relative w-full h-[600px] lg:h-[400px] bg-center bg-cover bg-[url(/assets/img/articles/article-img-3.jpg)]">
+                <div class="absolute z-[2] py-12 inset-0 bg-black/25 backdrop-blur-md text-white"></div>
+                <div class="absolute h-full z-[5] px-22 w-full grid grid-cols-1 lg:grid-cols-3 items-center justify-between">
+                    <div class="lg:text-center">
+                        <div class="flex items-center pt-6 lg:pt-0 justify-center">
+                            <img class="max-w-[340px] rounded-2xl shadow-2xl" src="/assets/img/articles/article-img-3.jpg" alt="blog img">
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex flex-col justify-between w-full h-full pt-4 lg:pt-16 lg:pr-18">
+                        <div class="mb-4 lg:mb-0">
+                            <h1 class="text-white font-bold text-xl lg:text-3xl text-center lg:text-right mb-4 lg:mb-6">سیستم مدیریت منابع انسانی </h1>
+                            <!-- <p class="text-white font-normal text-base lg:text-lg text-center lg:text-right lg:mx-none lg:w-2/3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p> -->
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start lg:items-right w-full gap-x-8 pb-14">
+                            <h6 class="text-white flex items-center gap-x-2 text-xs">
+                                <span>
+                                    <img class="w-4 lg:w-5" src="/assets/img/icons/calender.png" alt="calender icon">
+                                </span>
+                                21 بهمن 1403
+                            </h6>
+                            <h6 class="text-white flex items-center gap-x-2 text-xs">
+                                <span>
+                                    <img class="w-4 lg:w-5" src="/assets/img/icons/watch.png" alt="watch icon">
+                                </span>
+                                6 دقیقه
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container pt-18 mb-32">
+                <h3 class="text-xl font-bold mb-4">معرفی سیستم‌های اطلاعاتی در مدیریت منابع انسانی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">امروزه سیستم‌های اطلاعات منابع انسانی (HRIS) به عنوان یک ابزار کلیدی در مدیریت سازمان‌ها شناخته می‌شوند. این سیستم‌ها به کمک نرم‌افزارها و فرایندهای خاص، اطلاعات مربوط به کارکنان و فرآیندهای منابع انسانی را به نحو مؤثری جمع‌آوری، ذخیره‌سازی و تحلیل می‌کنند. اما واقعاً این سیستم چه اهمیتی دارد و چگونه می‌تواند به بهبود کارایی، افزایش تصمیم‌گیری مناسب و کاهش هزینه‌ها کمک کند؟ در این مقاله به بررسی دقیق‌تری از این سیستم‌ها، ویژگی‌ها و چالش‌های آن‌ها خواهیم پرداخت</p>
+
+                <h3 class="text-xl font-bold mb-4">تعریف سیستم اطلاعات منابع انسانی</h3>
+                <p class="pr-4 text-xl font-normal mb-4">سیستم اطلاعات منابع انسانی به مجموعه نرم‌افزارها و فرآیندهایی اطلاق می‌شود که به سازمان‌ها کمک می‌کند تا اطلاعات کارکنان خود را به شکل سازمان‌یافته‌تری جمع‌آوری و مدیریت نمایند. این اطلاعات شامل بخش‌های مختلفی از جمله سوابق شغلی، تحصیلات، عملکرد و همچنین اطلاعات مربوط به آموزش‌ها و مزایا است.</p>
+                <p class="pr-4 text-xl font-normal mb-12">به طور معمول، این سیستم‌ها به مدیران اجازه می‌دهند تا به سرعت به اطلاعات حیاتی دسترسی پیدا کنند، از این رو کمک زیادی به تسریع روند تصمیم‌گیری می‌نمایند. تاریخچه سیستم‌های اطلاعات منابع انسانی به دهه 1960 میلادی برمی‌گردد، زمانی که سازمان‌ها برای اولین بار از رایانه‌ها در فرآیندهای اداری خود بهره‌برداری کردند. از آن زمان، با پیشرفت فناوری و به ویژه با ظهور اینترنت، این سیستم‌ها تبدیل به ابزاری پیچیده‌تر و کارآمدتر شدند.</p>
+
+                <h3 class="text-xl font-bold mb-4">اهمیت سیستم‌های اطلاعات مدیریت منابع انسانی</h3>
+                <p class="pr-4 text-xl font-normal mb-4">استفاده از این سیستم‌ها، به سازمان‌ها این امکان را می‌دهد تا کارایی و بهره‌وری بالاتری داشته باشند. یکی از مزایای اصلی سیستم‌های HRIS، کاهش زمان در انجام فعالیت‌های اداری است. به عنوان مثال، با اتوماسیون فرآیندهای استخدام و پردازش حقوق، زمان و هزینه‌ها به طور قابل توجهی کاهش می‌یابد. این سیستم‌ها همچنین امکان تصمیم‌گیری بر اساس داده‌های به‌روز و دقیقی را فراهم می‌کنند که به مدیران کمک می‌کند تا بهترین راهکارها را برای حل مشکلات بیابند.</p>
+                <p class="pr-4 text-xl font-normal mb-12">از دیگر موارد حائز اهمیت می‌توان به شفافیت در فرآیندها و هماهنگی بیشتر بین اعضای تیم اشاره کرد که به بهبود رابطه بین کارکنان و افزایش رضایت شغلی منجر می‌شود. از طریق تجزیه و تحلیل داده‌ها، سازمان‌ها می‌توانند نقاط قوت و ضعف خود را شناسایی کرده و بر اساس این اطلاعات، به بهبود مستمر فرآیندها و نتایج دست یابند.</p>
+
+                <h2 class="text-xl font-bold mb-4">ویژگی‌های کلیدی سیستم اطلاعات منابع انسانی</h2>
+                <h3 class="text-xl font-bold mb-4">جمع‌آوری و ذخیره‌سازی داده‌ها</h3>
+                <p class="pr-4 text-xl font-normal mb-12">جمع‌آوری و ذخیره‌سازی داده‌ها در این سیستم‌ها گامی اساسی در مدیریت منابع انسانی به شمار می‌آید. سیستم‌ها به کمک نرم‌افزارهای مخصوص، می‌توانند اطلاعات پرسنلِ یک سازمان را به‌سادگی و به صورت الکترونیکی جمع‌آوری و در پایگاه‌داده‌های امن ذخیره کنند. به این طریق، سازمان‌ها می‌توانند به راحتی به داده‌های خود دسترسی پیدا کرده و آن‌ها را برای تحلیل‌های آتی آماده سازند</p>
+
+
+                <h3 class="text-xl font-bold mb-4">تحلیل و گزارش‌گیری</h3>
+                <p class="pr-4 text-xl font-normal mb-12">بعد از جمع‌آوری داده‌ها، تحلیل و گزارش‌گیری از آن‌ها جزء دیگر ویژگی‌های کلیدی سیستم‌های HRIS است. این سیستم‌ها امکان تحلیل داده‌ها را با استفاده از نرم‌افزارهای تحلیلی فراهم می‌آورند. گزارش‌های تولید شده می‌توانند شامل اطلاعاتی از قبیل ارزیابی عملکرد کارکنان، شناسایی نیازهای آموزشی و پیش‌بینی نیازهای استخدامی باشند. این تحلیل‌ها به مدیران کمک می‌کنند تا الگوها و روندهای نیز به ترسیم درآورند و تصمیمات موثری بگیرند</p>
+
+
+                <h3 class="text-xl font-bold mb-4">دسترسی و امنیت اطلاعات</h3>
+                <p class="pr-4 text-xl font-normal mb-12">دسترسی و امنیت اطلاعات یکی از جنبه‌های بسیار مهم در سیستم‌های اطلاعات منابع انسانی است. سازمان‌ها باید تضمین کنند که اطلاعات حساس کارکنان به صورت امن ذخیره و مدیریت می‌شود. استفاده از پروتکل‌های امنیتی مختلف مانند رمزگذاری و احراز هویت چندعاملی، از جمله اقداماتی است که برای تأمین امنیت داده‌ها باید در نظر گرفته شود. همچنین، دسترسی به اطلاعات باید محدود به افرادی باشد که دسترسی نیاز دارند و این مرزهای امنیتی باید به طور منظم مرور شود.</p>
+
+
+                <h2 class="text-xl font-bold mb-4">انواع سیستم‌های اطلاعاتی منابع انسانی</h2>
+                <h3 class="text-xl font-bold mb-4">سیستم‌های مبتنی بر ابر</h3>
+                <p class="pr-4 text-xl font-normal mb-12">این سیستم‌ها به سیستم‌هایی اشاره دارند که داده‌ها و نرم‌افزارهای مربوط به منابع انسانی در فضای ابری ذخیره می‌شوند. مزیت اصلی این نوع سیستم‌ها، دسترسی آسان به اطلاعات از هر نقطه‌ای با اتصال اینترنت است. همچنین، مقیاس‌پذیری و انعطاف‌پذیری از ویژگی‌های بارز این سیستم‌ها به شمار می‌آید که به سازمان‌ها این امکان را می‌دهد تا با توجه به نیازهای خود به راحتی تغییرات مورد نظر را اعمال کنند.</p>
+
+
+                <h3 class="text-xl font-bold mb-4">سیستم‌های محلی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">سیستم‌های محلی به سیستم‌هایی گفته می‌شود که تمامی اطلاعات در زیرساخت‌های داخلی سازمان ذخیره می‌شوند. این روش مزایای خاصی از جمله امنیت بیشتر و کنترل بیشتر بر روی داده‌ها را به همراه دارد، اما هزینه‌های  بالاتری نسبت به سیستم‌های مبتنی بر ابر دارد. هنوز هم بسیاری از سازمان‌های بزرگ و دولتی از این نوع سیستم‌ها استفاده می‌کنند.</p>
+
+                <h3 class="text-xl font-bold mb-4">سیستم‌های ترکیبی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">این نوع سیستم‌ها از ترکیب روش‌های مبتنی بر ابر و محلی تشکیل می‌شوند و به سازمان‌ها اجازه می‌دهند تا از مزایای هر دو روش بهره‌مند شوند. به عنوان مثال، اطلاعات حساس ممکن است در سرورهای محلی ذخیره شود در حالی که داده‌های عمومی در فضای ابری نگهداری می‌شوند. این رویکرد می‌تواند به بهبود امنیت و کنترل داده‌ها کمک کند.</p>
+
+                <h2 class="text-xl font-bold mb-4">مزایای استفاده از سیستم‌های اطلاعات مدیریت منابع انسانی</h2>
+                <h3 class="text-xl font-bold mb-4">افزایش کارایی سازمانی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">سیستم‌های اطلاعات مدیریت منابع انسانی امکان اتوماسیون فرآیندها را فراهم می‌آورند و این امر باعث افزایش کارایی سازمان می‌شود. با حذف مسائل دستی و زمان‌بر، مدیران و کارکنان می‌توانند بر روی استراتژی‌های مهم‌تری تمرکز کنند. برای مثال، زمان صرف شده برای ثبت و پیگیری اطلاعات به حداقل می‌رسد و این باعث می‌شود که منابع انسانی بتوانند به بهبود فرآیندهای سازمان بیشتر بپردازند.</p>
+
+                <h3 class="text-xl font-bold mb-4">بهبود تصمیم‌گیری</h3>
+                <p class="pr-4 text-xl font-normal mb-12">دسترسی به اطلاعات دقیق و به‌روز به مدیران کمک می‌کند تا تصمیمات بهتری در مورد استخدام، ترمیم و ارتقاء کارکنان اتخاذ کنند. این اطلاعات همچنین می‌تواند به شناسایی نیازهای آموزشی کارکنان کمک کند و این به بهبود کلی رضایت شغلی آنها کمک خواهد کرد</p>
+
+                <h3 class="text-xl font-bold mb-4">کاهش هزینه‌ها</h3>
+                <p class="pr-4 text-xl font-normal mb-12">استفاده از چنین سیستم‌هایی می‌تواند به کاهش هزینه‌های عمومی سازمان منجر شود. با اتوماسیون فرآیندها و مدیریت بهینه‌تر منابع، سازمان‌ها قادر خواهند بود تا هزینه‌ها را به حداقل برسانند و از منابع بیشتری برای پروژه‌های کلیدی استفاده نمایند.</p>
+
+                <h2 class="text-xl font-bold mb-4">چالش‌ها و فرصت‌های پیاده‌سازی سیستم اطلاعات نیروی انسانی</h2>
+                <h3 class="text-xl font-bold mb-4">چالش‌های تکنولوژیکی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">پیاده‌سازی این سیستم‌ها می‌تواند با چالش‌های مختلفی از جمله سازگاری نرم‌افزار و نیازهای خاص سازمان‌ها همراه باشد. در صورت لزوم، سفارشی‌سازی سیستم‌ها می‌تواند هزینه‌ها و زمان پیاده‌سازی را افزایش دهد. همچنین، امنیت اطلاعات یکی از چالش‌های مهم است که نیاز به توجه خاص دارد.</p>
+
+                <h3 class="text-xl font-bold mb-4">فرصت‌های بهبود فرآیندها</h3>
+                <p class="pr-4 text-xl font-normal mb-12">پیاده‌سازی سیستم اطلاعات منابع انسانی می‌تواند به تحقق اتوماسیون و بهبود فرآیندهای سازمانی کمک کند. این سیستم‌ها همچنین با دسترسی به اطلاعات دقیق و به‌روز، به مدیران اجازه می‌دهند که بهترین تصمیمات را ممکن کنند</p>
+
+                <h3 class="text-xl font-bold mb-4">تأثیر بر فرهنگ سازمانی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">یکی از تأثیرات مثبت پیاده‌سازی سیستم‌های اطلاعاتی نیروی انسانی بر فرهنگ سازمانی، ایجاد شفافیت در فرآیندها است. با فراهم آوردن دسترسی به اطلاعات و امکان ارتباط و همکاری بیشتر، احساس عدالت و همکاری در بین کارکنان ارتقاء می‌یابد.</p>
+
+                <h3 class="text-xl font-bold mb-4">نتیجه گیری</h3>
+                <p class="pr-4 text-xl font-normal mb-12">سیستم اطلاعات منابع انسانی به عنوان ابزاری قدرتمند در دنیای امروز نیاز به اهمیت و توجه ویژه‌ای دارد. این سیستم‌ها نه تنها به مدیریت و بهینه‌سازی منابع انسانی کمک می‌کنند بلکه به بهبود کارایی، کاهش هزینه‌ها و افزایش رضایت شغلی کارکنان نیز می‌انجامند. آشنایی با انواع سیستم‌ها، ویژگی‌ها و چالش‌های مربوط به آنها می‌تواند به سازمان‌ها در اتخاذ تصمیمات بهتر کمک کند و به افزایش بهره‌وری در سطح کلی سازمان منجر شود. به طوری کلی، سرمایه‌گذاری در سیستم‌های HRIS انعطاف‌پذیری و کارایی را برای سازمان‌ها به ارمغان می‌آورد و می‌تواند یک استراتژی مؤثر در راستای رسیدن به اهداف کلان سازمانی باشد.</p>
+            </div>
+        </section>
+        <section>
+            <div class="container mb-18">
+                <div class="flex items-center gap-x-4 mb-4">
+                    <img class="w-6" src="/assets/img/icons/comments.png" alt="comments icon">
+                    <h5 class="text-main-Purple text-xl font-black">نظرات شما</h5>
+                    <p class="text-main-Purple text-base font-normal">5 نظر</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 lg:gap-y-0 px-6 lg:px-18 gap-x-8">
+                    <div class="w-full shadow-main pl-4 py-2 lg:px-6 lg:py-4 rounded-xl bg-white">
+                        <div class="grid grid-cols-3">
+                            <div class="col-span-1">
+                                <div class="w-fit flex flex-col items-center gap-y-2">
+                                    <img class="w-12 h-12 lg:w-22 lg:h-22 rounded-2xl object-center object-cover" src="/assets/img/articles/article-img-1.png" alt="user img">
+                                    <div class="pr-2">
+                                        <h3 class="text-main-Purple font-semibold text-sm lg:text-lg text-center">نام کاربری</h3>
+                                        <p class="text-main-Purple font-normal text-[12px] lg:text-sm">21 بهمن 1403</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-2 flex flex-col items-end justify-between">
+                                <p class="font-normal text-[11px] lg:text-sm mb-3 lg:mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+
+                                <div class="flex items-center gap-x-4">
+                                    <p class="text-main-Purple text-[11px] lg:text-sm">3 پاسخ</p>
+                                    <button class="text-white bg-main-Purple text-[11px] lg:text-sm font-normal px-2 lg:px-4 py-1 rounded-lg">پاسخ به این نظر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full shadow-main pl-4 py-2 lg:px-6 lg:py-4 rounded-xl bg-white">
+                        <div class="grid grid-cols-3">
+                            <div class="col-span-1">
+                                <div class="w-fit flex flex-col items-center gap-y-2">
+                                    <img class="w-12 h-12 lg:w-22 lg:h-22 rounded-2xl object-center object-cover" src="/assets/img/articles/article-img-1.png" alt="user img">
+                                    <div class="pr-2">
+                                        <h3 class="text-main-Purple font-semibold text-sm lg:text-lg text-center">نام کاربری</h3>
+                                        <p class="text-main-Purple font-normal text-[12px] lg:text-sm">21 بهمن 1403</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-2 flex flex-col items-end justify-between">
+                                <p class="font-normal text-[11px] lg:text-sm mb-3 lg:mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+
+                                <div class="flex items-center gap-x-4">
+                                    <p class="text-main-Purple text-[11px] lg:text-sm">3 پاسخ</p>
+                                    <button class="text-white bg-main-Purple text-[11px] lg:text-sm font-normal px-2 lg:px-4 py-1 rounded-lg">پاسخ به این نظر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mb-18">
+                <form action="#">
+                    <h3 class="text-main-Purple font-extrabold text-xl mb-4">نظر خودتان را در مورد این مقاله بیان کنید: </h3>
+
+                    <div class="w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-4 pb-4 lg:pb-0">
+                            <div class="col-span-1">
+                                <label class="sr-only" for="userName">نام </label>
+                                <input class="w-full py-4 placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" type="text" placeholder="نام را وارد کنید">
+                            </div>
+                            <div class="lg:col-span-2">
+                                <label class="sr-only" for="userName">نام </label>
+                                <input class="w-full py-4 placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" type="text" placeholder="ایمیل را وارد کنید">
+                            </div>
+                            <div class="lg:col-span-3">
+                                <textarea placeholder="نظرتان را وارد کنید" class="h-[180px]  max-h-[180px] pt-4 border-none w-full placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" name="comment" id="comment"></textarea>
+                            </div>
+                        </div>
+
+                        <button class="text-white bg-main-Purple px-12 py-3 rounded-xl lg:w-fit w-full">ارسال نظر</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="bg-pastel-purple rounded-tr-4xl rounded-tl-4xl px-10 pt-9 lg:pt-14">
+                <!-- header -->
+                <section class="flex flex-col lg:flex-row items-center justify-between lg:mb-20 mb-6">
+                    <div class="mb-8 lg:mb-0">
+                        <a href="/index.html">
+                            <img class="w-[140px] md:w-[160px] lg:w-[180px]" src="/assets/img/logo/EXINESS.png"
+                                alt="exiness logo" />
+                        </a>
+                    </div>
+                    <div class="mb-6 lg:mb-8 w-full text-center lg:hidden">
+                        <span class="block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+                    <nav class="mb-6 lg:mb-0">
+                        <ul
+                            class="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-5 xl:space-x-7">
+                            <li>
+                                <a class="text-base" href="#">صفحه اصلی</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">خدمات</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">نمونه کار</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">وبلاگ</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">درباره ما</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">تماس با ما</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="mb-6 lg:mb-8 w-full text-center lg:hidden">
+                        <span class="block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+                    <div class="hidden lg:flex items-center lg:space-x-3 xl:space-x-4">
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                    </div>
+                </section>
+
+
+                <!-- info and form section -->
+                <section class="pb-14">
+                    <div class="mb-6 lg:mb-8">
+                        <span
+                            class="hidden lg:inline-block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+
+                    <div class="lg:flex lg:justify-between lg:items-center">
+                        <div class="space-y-4 mb-6">
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">آدرس
+                                : البرز، کرج،
+                                گلشهر، بلوار
+                                مصطفی خمینی، مجتمع کسری، واحد 25 ، پلاک7612</p>
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">ایمیل
+                                :
+                                infoexiness@gmail.com
+                            </p>
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">تماس
+                                : 09365008696
+                            </p>
+                            <div class="flex items-center justify-center space-x-2 lg:space-x-6 lg:hidden">
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                            </div>
+                        </div>
+
+                        <form action="#" class="lg:ml-24">
+                            <div
+                                class="grid grid-cols-3 gap-x-2 py-3 px-4 lg:px-8 lg:py-12 bg-white rounded-2xl sm:w-8/12 lg:w-auto sm:mx-auto">
+                                <div class="col-span-2">
+                                    <input
+                                        class="w-full h-full bg-white px-2 lg:px-4 py-2 lg:py-4 border-1 border-black text-sm lg:text-base font-normal rounded-lg"
+                                        type="text" placeholder="ایمیل">
+                                </div>
+                                <div class="col-span-1">
+                                    <button
+                                        class="w-full h-full lg:text-base text-sm font-semibold bg-main-Purple text-white rounded-lg">ارسال
+                                        پیام</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!-- exiness -->
+                <section class="pb-4 lg:pb-8">
+                    <h3 class="text-center border-b-1 border-black font-bold text-[13px] lg:text-xl pb-2">
+                        اکسینس تحولی در بـیزنس | EXINESS Revelotion In Business
+                    </h3>
+                </section>
+                <!-- copyright -->
+                <section class="flex items-center justify-center gap-x-4 pb-3 lg:pb-4 text-center">
+                    <p class="font-normal text-[10px] lg:text-sm">Privacy Policy</p>
+                    <p class="font-normal text-[10px] lg:text-sm">
+                        © 2023 EXINESS. All Rights Reserved.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/js/main.js"></script>
+    <script src="/js/lib/flowbite/flowbite.min.js"></script>
+</body>
+
+</html>

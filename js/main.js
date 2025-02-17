@@ -17,7 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#userAvatarDesktop").classList.remove("hidden");
     userNamePlace.textContent = userName;
   }
+  // cons
+  const reqButtons = document.querySelectorAll("#request");
+  reqButtons.forEach(i => {
+    i.addEventListener("click" , () => {
+      const token = getCookie("token");
+      const userSignin = getCookie("userIsSignin")
+      if(token && userSignin){
+        window.location.href = "consultation.html";
 
-  
+      }else if(token === null && userSignin){
+        window.location.href = "login.html"
+
+      }else{
+        window.location.href = "signup.html"
+      }
+    })
+  })
 
 });
+

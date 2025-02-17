@@ -1,4 +1,5 @@
 import {setLocalStorage} from "/js/util/localStorage/localStorage.js"
+import { setCookie } from "../util/cookies/cookies.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const signupForm = document.querySelector("#signup");
@@ -9,20 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const userNameElement = document.querySelector("#userName");
   const userPasswordElement = document.querySelector("#userPassword");
 
-  // Function to show error messages
-  function showError(inputElement, errorElement) {
-    errorElement.classList.remove("hidden");
-    inputElement.classList.add("border-red-800");
-  }
-
-  // Function to hide error messages
-  function hideError(inputElement, errorElement) {
-    errorElement.classList.add("hidden");
-    inputElement.classList.remove("border-red-800");
-  }
-
   signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    document.getElementById("nameError").classList.add("hidden");
+    document.getElementById("lastNameError").classList.add("hidden");
+    document.getElementById("emailError").classList.add("hidden");
+    document.getElementById("phoneNumberError").classList.add("hidden");
+    document.getElementById("emailError").classList.add("hidden");
+    document.getElementById("userNameError").classList.add("hidden");
+    document.getElementById("userPasswordError").classList.add("hidden");
+
+
 
     // Get error elements
     const nameError = document.querySelector("#nameError");
@@ -48,59 +47,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Validate Name
     if (!name) {
-      showError(nameElement, nameError);
+      document.getElementById("nameError").classList.remove("hidden");
       isValid = false;
-    } else {
-      hideError(nameElement, nameError);
-    }
+    } 
 
     // Validate Last Name
     if (!userLastName) {
-      showError(userLastNameElement, lastNameError);
+      document.getElementById("lastNameError").classList.remove("hidden");
       isValid = false;
-    } else {
-      hideError(userLastNameElement, lastNameError);
     }
 
     // Validate Email
     if (!emailRegex.test(userEmail)) {
-      showError(userEmailElement, emailError);
+      document.getElementById("emailError").classList.remove("hidden");
       isValid = false;
-    } else {
-      hideError(userEmailElement, emailError);
-    }
+    } 
 
     // Validate Phone Number
     if (!phoneNumberRegex.test(userPhoneNumber)) {
-      showError(userPhoneNumberElement, phoneNumberError);
+      document.getElementById("phoneNumberError").classList.remove("hidden");
       isValid = false;
-    } else {
-      hideError(userPhoneNumberElement, phoneNumberError);
-    }
+    } 
 
     // Validate Username
     if (!userName) {
-      showError(userNameElement, userNameError);
+      document.getElementById("userNameError").classList.remove("hidden");
       isValid = false;
-    } else {
-      hideError(userNameElement, userNameError);
-    }
+    } 
 
     // Validate Password (minimum 8 characters)
     if (userPassword.length < 8) {
-      showError(userPasswordElement, userPasswordError);
+      document.getElementById("userPasswordError").classList.remove("hidden");
       isValid = false;
-    } else {
-      hideError(userPasswordElement, userPasswordError);
-    }
+    } 
 
 
     // Prepare userData for API request
     const userData = {
       name,
-      lastName: userLastName,
+      lastname: userLastName,
       email: userEmail,
-      phoneNumber: userPhoneNumber,
+      phonenumber: userPhoneNumber,
       username: userName,
       password: userPassword
     };
@@ -111,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(result.message);
 
       if (result.success) {
+        setCookie("userSignin" , "true")
         setLocalStorage("userData", { userName, userPassword });
         signupForm.reset(); // Reset form on successful registration
         window.location.href = "login.html"
@@ -122,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to send signup request
 async function signup(userData) {
   try {
-    const response = await fetch("/api/auth/register", {
+    const response = await fetch("https://api.exiness.com/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -131,11 +119,14 @@ async function signup(userData) {
     });
 
     if (response.ok) {
-      return { success: true, message: "✅ ثبت‌نام با موفقیت انجام شد" };
+      return { success: true, message: "✅ ثبت‌ نام با موفقیت انجام شد" };
+
     } else if (response.status === 400) {
       return { success: false, message: "⚠️ داده‌های ورودی نامعتبر هستند" };
+
     } else if (response.status === 409) {
       return { success: false, message: "❌ نام کاربری قبلاً ثبت شده است" };
+
     } else {
       return { success: false, message: "❗ خطای نامشخص، لطفاً دوباره امتحان کنید" };
     }

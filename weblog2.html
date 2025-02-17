@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/flowbite.min.css" />
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <header class="shadow-header bg-white sticky top-0 z-50">
+        <div class="container flex items-center justify-between py-[20px]">
+            <!-- brand -->
+            <section class="order-2 col-span-2 lg:col-span-1 lg:order-1 grid place-items-center">
+                <a href="index.html" itemprop="url">
+                    <img class="w-[140px] md:w-[180px]" src="/assets/img/logo/EXINESS.png" alt="exiness logo" />
+                </a>
+            </section>
+            <!-- navbar -->
+            <nav id="navbar"
+                class="lg:col-span-2 shadow-2xl duration-400 lg:duration-0 translate-x-[120%] z-50 fixed top-0 md:-right-4 -right-2 bottom-0 h-full w-[50%] md:w-[30%] rounded-tl-full rounded-bl-full border-8 border-white bg-main-Purple lg:translate-0 lg:w-auto lg:bg-transparent lg:shadow-none lg:order-2 lg:static">
+                <!-- close menu button -->
+                <section class="lg:hidden relative top-[45%] -translate-y-1/2">
+                    <button id="close__button"
+                        class="absolute -left-8 lg:hidden cursor-pointer p-5 bg-main-Purple rounded-tl-full rounded-bl-full flex items-center justify-center">
+                        <img class="w-[30px] h-[30px]" src="/assets/img/icons/header/close.png" alt="close button" />
+                    </button>
+                </section>
+                <ul
+                    class="text-md pr-6 pl-8 pt-32 lg:pr-0 lg:pl-0 lg:px-0 lg:pt-0 lg:flex lg:items-center lg:justify-center lg:gap-x-8">
+                    <li class="lg:hidden mb-10">
+                        <a href="mainSection">
+                            <img class="w-[130px]" src="/assets/img/logo/EXINESS.png" alt="exiness logo" />
+                        </a>
+                    </li>
+                    <li class="text-white my-7 lg:my-0 lg:text-black">
+                        <div class="flex items-center gap-x-3 lg:block pb-6 lg:pb-0">
+                            <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/home.png" alt="home icon" />
+                            <a href="#">صفحه اصلی</a>
+                        </div>
+                        <span class="lg:hidden block w-full h-[4px] bg-gradient-to-r from-white/0 to-white"></span>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/star.png" alt="star icon" />
+                        <a href="#collaborate">همکاران</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/about.png" alt="about icon" />
+                        <a href="#about">درباره ما</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/archive.png"
+                            alt="archive icon" />
+                        <a href="#services">خدمات</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/blogs.png" alt="blogs icon" />
+                        <a href="../src/pages/blogsPage.html">وبلاگ</a>
+                    </li>
+                    <li class="flex items-center gap-x-3 lg:block text-white my-7 lg:my-0 lg:text-black">
+                        <img class="lg:hidden w-[20px]" src="/assets/img/icons/header/contact.png"
+                            alt="contact icon" />
+                        <a href="#">تماس با ما</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- actions -->
+            <section class="order-3 lg:order-3 col-span-1">
+                <div class="flex justify-end space-x-2">
+                    <a href="/signup.html" rel="nofollow"
+                        class="cursor-pointer bg-main-Purple text-sm lg:text-base text-smoky-white px-2.5 py-1 md:px-5 md:py-2 lg:px-8 lg:py-3.5 rounded-4xl">
+                        ثبت نام
+                    </a>
+                    <a href="/login.html" rel="nofollow"
+                        class="cursor-pointer bg-very-light-purple text-sm lg:text-base text-main-Purple border-1 border-dark-smoky px-2.5 py-1 md:px-5 md:py-2 lg:px-8 lg:py-3.5 rounded-4xl">
+                        ورود
+                    </a>
+                </div>
+            </section>
+            <!-- hamburger menu -->
+            <section class="lg:hidden order-1 text-base/1">
+                <button id="menu__button" class="space-y-1 md:space-y-1.5 cursor-pointer">
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                    <span class="w-[27px] md:w-[45px] h-[4px] rounded-full bg-black block"></span>
+                </button>
+            </section>
+        </div>
+    </header>
+    <article>
+        <section>
+            <div class="relative w-full h-[600px] lg:h-[400px] bg-center bg-cover bg-[url(/assets/img/articles/article-img-4.jpg)]">
+                <div class="absolute z-[2] py-12 inset-0 bg-black/25 backdrop-blur-md text-white"></div>
+                <div class="absolute h-full z-[5] px-22 w-full grid grid-cols-1 lg:grid-cols-3 items-center justify-between">
+                    <div class="lg:text-center">
+                        <div class="flex items-center pt-6 lg:pt-0 justify-center">
+                            <img class="max-w-[340px] rounded-2xl shadow-2xl" src="/assets/img/articles/article-img-4.jpg" alt="blog img">
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex flex-col justify-between w-full h-full pt-4 lg:pt-16 lg:pr-18">
+                        <div class="mb-4 lg:mb-0">
+                            <h1 class="text-white font-bold text-xl lg:text-3xl text-center lg:text-right mb-4 lg:mb-6">استراتژی‌های موثر برای توسعه کسب و کار دیجیتال و گسترش حرفه‌ای آن</h1>
+                            <!-- <p class="text-white font-normal text-base lg:text-lg text-center lg:text-right lg:mx-none lg:w-2/3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p> -->
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start lg:items-right w-full gap-x-8 pb-14">
+                            <h6 class="text-white flex items-center gap-x-2 text-xs">
+                                <span>
+                                    <img class="w-4 lg:w-5" src="/assets/img/icons/calender.png" alt="calender icon">
+                                </span>
+                                21 بهمن 1403
+                            </h6>
+                            <h6 class="text-white flex items-center gap-x-2 text-xs">
+                                <span>
+                                    <img class="w-4 lg:w-5" src="/assets/img/icons/watch.png" alt="watch icon">
+                                </span>
+                                6 دقیقه
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container pt-18 mb-32">
+                <h2 class="text-xl font-bold mb-4">استراتژی‌های موثر برای توسعه کسب و کار دیجیتال و گسترش حرفه‌ای آن</h2>
+                <p class="pr-4 text-xl font-normal mb-12">استراتژی‌های موثر برای توسعه کسب و کار دیجیتال و گسترش حرفه‌ای آن
+                    در دنیای امروز، رشد و پیشرفت در عرصه کسب و کارهای دیجیتال به یک نیاز اساسی تبدیل شده است. برای رسیدن به موفقیت پایدار در این حوزه، انتخاب و اجرای استراتژی‌های کارآمد و هدفمند امری حیاتی است. یکی از این استراتژی‌ها، طراحی برنامه‌های آموزشی مختص به مهارت‌های نوین و پرتقاضا همچون تجزیه و تحلیل داده‌ها و هوش مصنوعی می‌باشد. به‌علاوه، پرورش فرهنگ یادگیری مستمر و استفاده از روش‌های نوین جذب و مشارکت مانند گیمیفیکیشن، می‌تواند به بهبود توانمندی‌های کارکنان و افزایش بهره‌وری منجر شود. همچنین، همکاری با متخصصان این حوزه و انجام پروژه‌های عملی، به ارتقاء تجربه واقعی تیم‌ها کمک خواهد کرد. در نهایت، ارزیابی‌های منظم و تعامل با مراکز آموزشی از اهمیت بسزایی در به‌روز نگه‌داشتن مهارت‌ها و شناخت روندهای جدید برخوردار است.
+                    </p>
+
+                <h3 class="text-xl font-bold mb-4">اهمیت آموزش تخصصی در موفقیت کسب‌وکار</h3>
+                <p class="pr-4 text-xl font-normal mb-12">آموزش تخصصی در موفقیت کسب‌وکار به عنوان یکی از ارکان اساسی در دنیای امروز شناخته می‌شود. با توجه به رشد سریع فناوری و تغییرات دائمی در بازار، سازمان‌ها باید به بهبود مهارت‌های کارکنان خود توجه ویژه‌ای داشته باشند. در ادامه به تبیین اهمیت آموزش تخصصی و تأثیرات آن بر کسب‌وکار می‌پردازیم</p>
+
+                <h3 class="text-xl font-bold mb-4">افزایش مهارت‌ها و توانمندی‌ها</h3>
+                <p class="pr-4 text-xl font-normal mb-12">یکی از مزایای بارز آموزش تخصصی، ارتقاء مهارت‌ها و توانمندی‌های کارکنان است. این فرآیند به آنها این امکان را می‌دهد که با آخرین تکنولوژی‌ها و روش‌های کار آشنا شوند. به این ترتیب، سازمان قادر است در رقابتی که به طور مداوم در حال تغییر است، باقی بماند و از رقبای خود پیشی بگیرد</p>
+
+                <h3 class="text-xl font-bold mb-4">بهبود کارایی و بهره‌وری</h3>
+                <p class="pr-4 text-xl font-normal mb-12">آموزش تخصصی می‌تواند به بهینه‌سازی فرآیندهای کاری و افزایش بهره‌وری منجر شود. کارکنانی که آموزش‌های لازم را دریافت کرده‌اند، می‌توانند کار خود را به شکل مؤثرتری انجام دهند. این امر نه تنها به نفع خود کارکنان است بلکه موجب افزایش سودآوری و کاهش هزینه‌های عملیاتی کسب‌وکار نیز می‌شود.</p>
+
+                <h3 class="text-xl font-bold mb-4">توسعه نوآوری</h3>
+                <p class="pr-4 text-xl font-normal mb-12">خلاقیت و نوآوری از دیگر اثرات مثبت آموزش تخصصی هستند. زمانی که کارکنان در زمینه‌های مختلف آموزش می‌بینند، توانایی ارائه ایده‌های نو برای بهبود محصولات و خدمات را پیدا می‌کنند. این امر به کسب‌وکار کمک می‌کند تا در مسیر رشد و توسعه قرار گیرد و نیازهای مشتریان را بهتر برآورده کند.</p>
+
+                <h3 class="text-xl font-bold mb-4">افزایش رضایت شغلی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">احساس توجه و سرمایه‌گذاری در کارکنان از طریق آموزش‌های مستمر، می‌تواند رضایت شغلی آنها را افزایش دهد. این موضوع به نوبه خود منجر به کاهش نرخ ترک شغل و هزینه‌های مربوط به جذب و آموزش کارکنان جدید می‌شود.</p>
+
+                <h3 class="text-xl font-bold mb-4">پاسخگویی به نیازهای بازار</h3>
+                <p class="pr-4 text-xl font-normal mb-4">در دنیای امروز، بازار و نیازهای مشتریان به سرعت در حال تغییر هستند. آموزش تخصصی به کسب‌وکارها این امکان را می‌دهد تا به این تغییرات پاسخ دهند. کارکنانی که با آخرین ترندها و نیازهای بازار آشنا هستند، می‌توانند خدمات و محصولات بهتری را ارائه دهند و در نتیجه، رضایت مشتریان را جلب کنند.</p>
+                <p class="pr-4 text-xl font-normal mb-12">در جمع‌بندی، می‌توان گفت که آموزش تخصصی نه تنها به رشد فردی کارکنان کمک می‌کند بلکه به موفقیت کلی کسب‌وکار نیز منجر می‌شود. سرمایه‌گذاری در این حوزه می‌تواند آینده‌ای روشن‌تر و پایدارتر برای سازمان‌ها به ارمغان آورد</p>
+
+                <h3 class="text-xl font-bold mb-4">روش‌های نوین برای افزایش مهارت‌های کارکنان</h3>
+                <p class="pr-4 text-xl font-normal mb-12">در دنیای امروز، افزایش مهارت‌های کارکنان به یکی از اولویت‌های اصلی سازمان‌ها تبدیل شده است. برای پاسخگویی به تغییرات سریع بازار و تقاضاهای جدید، روش‌های نوینی برای توسعه مهارت‌های نیروی کار معرفی شده‌اند که به بهبود عملکرد و کارایی کمک می‌کنند.</p>
+
+                <h3 class="text-xl font-bold mb-4">یادگیری و توسعه (L&D)</h3>
+                <p class="pr-4 text-xl font-normal mb-12">این رویکرد شامل مراحل مختلفی است که به تجزیه و تحلیل نیازهای آموزشی، تعیین اهداف مشخص و طراحی محتوا می‌پردازد. به منظور بهبود مهارت‌های کارکنان، می‌توان از دوره‌های آنلاین بهره‌برداری کرد و آن‌ها را با سمینارها و سخنرانی‌های حضوری ترکیب نمود. این روش به کارکنان این امکان را می‌دهد که در فضایی پویا و تعاملی، مهارت‌های خود را ارتقاء دهند.</p>
+
+                <h3 class="text-xl font-bold mb-4">چرخش شغلی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">چرخش شغلی به کارکنان فرصتی می‌دهد تا در مشاغل مختلف درون سازمان حرکت کنند. این جابه‌جایی نه تنها به انتقال مهارت‌ها و دانش کمک می‌کند بلکه تنوع تجربیات شغلی را نیز افزایش می‌دهد. این روش می‌تواند به ایجاد دیدگاه‌های جدید و بهبود کارایی کلی سازمان منجر شود.</p>
+
+                <h3 class="text-xl font-bold mb-4">بسط شغلی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">افزودن مسئولیت‌ها و فعالیت‌های جدید به شغل فعلی کارکنان، روشی است که به یادگیری مهارت‌های جدید و رشد شغلی کمک می‌کند. با این کار، کارکنان احساس می‌کنند که در حال پیشرفت و ارتقاء هستند و این امر می‌تواند انگیزه آن‌ها را افزایش دهد.</p>
+
+                <h3 class="text-xl font-bold mb-4">غنی‌سازی شغلی</h3>
+                <p class="pr-4 text-xl font-normal mb-12">این روش با افزودن ابعاد جدید به مشاغل، همچون افزایش تنوع مهارت‌ها و استقلال در کار، به ارتقای مهارت‌های کارکنان کمک می‌کند. انگیزه و رضایت شغلی کارکنان با ایجاد فرصت‌های جدید به طرز قابل توجهی افزایش می‌یاب</p>
+
+
+                <h3 class="text-xl font-bold mb-4">نقش مشاوره در رشد حرفه‌ای سازمان‌ها</h3>
+                <p class="pr-4 text-xl font-normal mb-12">نقش مشاوره در رشد حرفه‌ای سازمان‌ها به اندازه‌ای اهمیت دارد که می‌توان آن را به عنوان یکی از ارکان اساسی برای بهبود عملکرد و توسعه سازمان‌ها در نظر گرفت. مشاوره سازمانی به عنوان ابزاری کارآمد، قادر است به شناسایی و حل مسائل مدیریتی پرداخته و به بهبود فرآیندهای کاری کمک کند. به این ترتیب، سازمان‌ها می‌توانند بهتر با چالش‌ها و تغییرات محیطی مواجه شوند</p>
+
+                <h3 class="text-xl font-bold mb-4">بهبود عملکرد مشورتجو</h3>
+                <p class="pr-4 text-xl font-normal mb-4">یکی از جنبه‌های کلیدی نقش مشاوره، بهبود عملکرد مشورتجو است. مشاوران با انجام ارزیابی‌های دقیق از وضعیت موجود، توانایی شناسایی نقاط قوت و ضعف سازمان را دارند. این ارزیابی نه تنها به تحلیل مشکلات جاری می‌پردازد، بلکه در جهت توسعه استراتژی‌های بلندمدت نیز مؤثر است. از جمله فعالیت‌هایی که مشاوران می‌توانند انجام دهند می‌توان به موارد زیر اشاره کرد:</p>
+                <ul class="pr-12 list-disc space-y-2 text-base font-semibold mb-12">
+                    <li>طراحی و اجرای برنامه‌های آموزشی برای ارتقاء مهارت‌های کارکنان</li>
+                    <li>بهبود فرآیندهای کاری و افزایش بهره‌وری</li>
+                    <li>بهبود فرآیندهای کاری و افزایش بهره‌وری</li>
+                </ul>
+
+                <h3 class="text-xl font-bold mb-4">ارتقاء مهارت‌های مشورتجو</h3>
+                <p class="pr-4 text-xl font-normal mb-12">مشاوره به افراد و تیم‌ها این امکان را می‌دهد که توانایی‌های خود را بهبود بخشند و مهارت‌های خود را به سطح بالاتری ارتقاء دهند. این موضوع به ویژه برای مدیران و رهبران سازمان‌ها از اهمیت ویژه‌ای برخوردار است، چرا که آنها باید برای مدیریت تغییرات و چالش‌های جدید آمادگی داشته باشند. مشاوران با ارائه آموزش‌های حرفه‌ای و ایجاد فرصت‌های یادگیری، به تقویت مهارت‌های مدیریتی و رهبری کمک می‌کنند.</p>
+
+
+                <h3 class="text-xl font-bold mb-4">ایجاد اعتماد و روابط مؤثر</h3>
+                <p class="pr-4 text-xl font-normal mb-12">یکی از مؤلفه‌های حیاتی در فرایند مشاوره، ایجاد اعتماد و برقراری روابط مؤثر بین مشاور و مشورتجو است. این روابط می‌توانند به بهبود ارتباطات درون سازمانی و افزایش همکاری بین اعضای تیم‌ها کمک کنند. مشاوران با فراهم کردن محیطی امن و محرمانه، به کارکنان این فرصت را می‌دهند که افکار و احساسات خود را به راحتی بیان کنند. این امر به تحلیل دقیق‌تر وضعیت سازمان منجر شده و می‌تواند راهگشای حل مسائل مختلف باشد.</p>
+
+                <h3 class="text-xl font-bold mb-4">کاتالیزور برای تغییرات مثبت</h3>
+                <p class="pr-4 text-xl font-normal mb-4">مشاوره سازمانی می‌تواند به عنوان یک کاتالیزور برای تغییرات مثبت در سازمان عمل کند. مشاوران با شناسایی فرصت‌های جدید و ارائه راهکارهای نوآورانه، به سازمان‌ها کمک می‌کنند تا به اهداف خود دست یابند و در بازار رقابتی عملکرد بهتری داشته باشند. این نقش در دوران تغییرات سریع و عدم قطعیت‌های اقتصادی و اجتماعی اهمیت بیشتری پیدا می‌کند و می‌تواند به سازمان‌ها کمک کند تا سازگاری بیشتری با شرایط جدید پیدا کنند.</p>
+                <p class="pr-4 text-xl font-normal mb-12">در نهایت، می‌توان گفت که مشاوره در رشد حرفه‌ای سازمان‌ها نه تنها به بهبود عملکرد و ارتقاء مهارت‌ها کمک می‌کند، بلکه به ایجاد فرهنگ یادگیری و نوآوری نیز می‌انجامد. این فرهنگ برای موفقیت و پایداری سازمان‌ها ضروری است و سازمان‌هایی که از مشاوره به درستی بهره‌برداری می‌کنند، به احتمال زیاد در مسیر موفقیت قرار خواهند گرفت</p>
+
+                <h3 class="text-xl font-bold mb-4">ارزیابی مستمر و بهبود عملکرد کارکنان</h3>
+                <p class="pr-4 text-xl font-normal mb-12">برای ارزیابی مستمر و بهبود عملکرد کارکنان، ضروری است که سازمان‌ها یک رویکرد جامع و نظام‌مند را اتخاذ کنند. این رویکرد باید شامل مراحل مختلفی باشد که به شناسایی نقاط قوت و ضعف کارکنان و ارائه بازخورد موثر کمک کند. در ادامه به بررسی مراحل کلیدی در این فرایند خواهیم پرداخت</p>
+
+                <h3 class="text-xl font-bold mb-4">تعیین اهداف و شاخص‌های عملکرد</h3>
+                <p class="pr-4 text-xl font-normal mb-4">در ابتدا، تعیین اهداف مشخص برای هر یک از کارکنان امری حیاتی است. این اهداف باید به‌طور واضح و قابل اندازه‌گیری تعریف شوند تا کارکنان بتوانند به راحتی پیشرفت خود را ارزیابی کنند. این اهداف می‌توانند شامل:</p>
+                <ul class="pr-12 list-disc space-y-2 text-base font-semibold mb-4">
+                    <li>کیفیت کار</li>
+                    <li>زمانبندی پروژه‌ها</li>
+                    <li>سطح رضایت مشتریان</li>
+                </ul>
+                <p class="pr-4 text-xl font-normal mb-12">با تعیین این اهداف، سازمان‌ها می‌توانند به راحتی عملکرد هر فرد را اندازه‌گیری کرده و نقاط ضعف را شناسایی کنند</p>
+
+                <h3 class="text-xl font-bold mb-4">ارزیابی دوره‌ای و پروژه‌ای</h3>
+                <p class="pr-4 text-xl font-normal mb-4">روش‌های ارزیابی می‌توانند به دو دسته اصلی تقسیم شوند: ارزیابی دوره‌ای که معمولاً سالانه انجام می‌شود و ارزیابی پروژه‌ای که در خلال پروژه‌های خاص صورت می‌گیرد. این دو روش به شفافیت و دقت در فرایند ارزیابی کمک می‌کنند و به مدیران این امکان را می‌دهند تا عملکرد کارکنان را در زمان‌های مختلف مورد بررسی قرار دهند.</p>
+                <p class="pr-4 text-xl font-normal mb-4">بازخورد ۳۶۰ درجه</p>
+                <p class="pr-4 text-xl font-normal mb-12">جمع‌آوری بازخورد از منابع مختلف از جمله مدیران، همکاران، زیرمجموعه‌ها و مشتریان، روشی مؤثر برای شناسایی نقاط قوت و ضعف کارکنان است. این نوع بازخورد به کارکنان کمک می‌کند تا دیدگاه‌های متفاوت را در مورد عملکرد خود دریافت کرده و در نتیجه، به بهبود مستمر خود بپردازند.</p>
+
+                <h3 class="text-xl font-bold mb-4">مصاحبه‌های عملکرد</h3>
+                <p class="pr-4 text-xl font-normal mb-12">برگزاری مصاحبه‌های یک به یک با کارکنان فرصتی برای مدیران فراهم می‌آورد تا به اطلاعات عمیق‌تری درباره عملکرد و نیازهای کارکنان دست یابند. این مصاحبه‌ها نه تنها به شناسایی نقاط قوت کمک می‌کند، بلکه می‌تواند به کشف موانع و چالش‌های موجود نیز کمک کند</p>
+
+                <h3 class="text-xl font-bold mb-4">نتیجه گیری</h3>
+                <p class="pr-4 text-xl font-normal mb-4">بهبود فرهنگ سازمانی و ایجاد یک محیط کار مثبت می‌تواند تأثیر زیادی بر عملکرد کارکنان داشته باشد. تشویق به همکاری و تعامل مثبت بین کارکنان، می‌تواند به افزایش انگیزه و بهبود عملکرد منجر شود.</p>
+                <p class="pr-4 text-xl font-normal mb-4">در پایان، می‌توان گفت که توسعه کسب و کار دیجیتال و گسترش حرفه‌ای آن نیازمند توجه به چندین عامل کلیدی است. از اهمیت آموزش تخصصی و روش‌های نوین برای افزایش مهارت‌های کارکنان گرفته تا نقش مشاوره در رشد حرفه‌ای سازمان‌ها، هر یک به نوعی به بهبود عملکرد و افزایش بهره‌وری کمک می‌کند. ابزارهای دیجیتال، اگر به درستی مورد استفاده قرار گیرند، می‌توانند تسهیل‌کننده‌های مهمی در این فرآیند باشند.. توجه به این استراتژی‌ها می‌تواند به سازمان‌ها کمک کند تا در دنیای پیچیده و رقابتی امروز، به موفقیت‌های قابل توجهی دست یابند</p>
+
+
+            </div>
+        </section>
+        <section>
+            <div class="container mb-18">
+                <div class="flex items-center gap-x-4 mb-4">
+                    <img class="w-6" src="/assets/img/icons/comments.png" alt="comments icon">
+                    <h5 class="text-main-Purple text-xl font-black">نظرات شما</h5>
+                    <p class="text-main-Purple text-base font-normal">5 نظر</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 lg:gap-y-0 px-6 lg:px-18 gap-x-8">
+                    <div class="w-full shadow-main pl-4 py-2 lg:px-6 lg:py-4 rounded-xl bg-white">
+                        <div class="grid grid-cols-3">
+                            <div class="col-span-1">
+                                <div class="w-fit flex flex-col items-center gap-y-2">
+                                    <img class="w-12 h-12 lg:w-22 lg:h-22 rounded-2xl object-center object-cover" src="/assets/img/articles/article-img-1.png" alt="user img">
+                                    <div class="pr-2">
+                                        <h3 class="text-main-Purple font-semibold text-sm lg:text-lg text-center">نام کاربری</h3>
+                                        <p class="text-main-Purple font-normal text-[12px] lg:text-sm">21 بهمن 1403</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-2 flex flex-col items-end justify-between">
+                                <p class="font-normal text-[11px] lg:text-sm mb-3 lg:mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+
+                                <div class="flex items-center gap-x-4">
+                                    <p class="text-main-Purple text-[11px] lg:text-sm">3 پاسخ</p>
+                                    <button class="text-white bg-main-Purple text-[11px] lg:text-sm font-normal px-2 lg:px-4 py-1 rounded-lg">پاسخ به این نظر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full shadow-main pl-4 py-2 lg:px-6 lg:py-4 rounded-xl bg-white">
+                        <div class="grid grid-cols-3">
+                            <div class="col-span-1">
+                                <div class="w-fit flex flex-col items-center gap-y-2">
+                                    <img class="w-12 h-12 lg:w-22 lg:h-22 rounded-2xl object-center object-cover" src="/assets/img/articles/article-img-1.png" alt="user img">
+                                    <div class="pr-2">
+                                        <h3 class="text-main-Purple font-semibold text-sm lg:text-lg text-center">نام کاربری</h3>
+                                        <p class="text-main-Purple font-normal text-[12px] lg:text-sm">21 بهمن 1403</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-span-2 flex flex-col items-end justify-between">
+                                <p class="font-normal text-[11px] lg:text-sm mb-3 lg:mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+
+                                <div class="flex items-center gap-x-4">
+                                    <p class="text-main-Purple text-[11px] lg:text-sm">3 پاسخ</p>
+                                    <button class="text-white bg-main-Purple text-[11px] lg:text-sm font-normal px-2 lg:px-4 py-1 rounded-lg">پاسخ به این نظر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mb-18">
+                <form action="#">
+                    <h3 class="text-main-Purple font-extrabold text-xl mb-4">نظر خودتان را در مورد این مقاله بیان کنید: </h3>
+
+                    <div class="w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-4 pb-4 lg:pb-0">
+                            <div class="col-span-1">
+                                <label class="sr-only" for="userName">نام </label>
+                                <input class="w-full py-4 placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" type="text" placeholder="نام را وارد کنید">
+                            </div>
+                            <div class="lg:col-span-2">
+                                <label class="sr-only" for="userName">نام </label>
+                                <input class="w-full py-4 placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" type="text" placeholder="ایمیل را وارد کنید">
+                            </div>
+                            <div class="lg:col-span-3">
+                                <textarea placeholder="نظرتان را وارد کنید" class="h-[180px]  max-h-[180px] pt-4 border-none w-full placeholder-main-Purple text-main-Purple border-0 focus:border-none focus:ring-0 bg-smoky-white shadow-inner rounded-xl" name="comment" id="comment"></textarea>
+                            </div>
+                        </div>
+
+                        <button class="text-white bg-main-Purple px-12 py-3 rounded-xl lg:w-fit w-full">ارسال نظر</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <div class="container">
+            <div class="bg-pastel-purple rounded-tr-4xl rounded-tl-4xl px-10 pt-9 lg:pt-14">
+                <!-- header -->
+                <section class="flex flex-col lg:flex-row items-center justify-between lg:mb-20 mb-6">
+                    <div class="mb-8 lg:mb-0">
+                        <a href="index.html">
+                            <img class="w-[140px] md:w-[160px] lg:w-[180px]" src="/assets/img/logo/EXINESS.png"
+                                alt="exiness logo" />
+                        </a>
+                    </div>
+                    <div class="mb-6 lg:mb-8 w-full text-center lg:hidden">
+                        <span class="block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+                    <nav class="mb-6 lg:mb-0">
+                        <ul
+                            class="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-5 xl:space-x-7">
+                            <li>
+                                <a class="text-base" href="#">صفحه اصلی</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">خدمات</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">نمونه کار</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">وبلاگ</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">درباره ما</a>
+                            </li>
+                            <li>
+                                <a class="text-base" href="#">تماس با ما</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="mb-6 lg:mb-8 w-full text-center lg:hidden">
+                        <span class="block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+                    <div class="hidden lg:flex items-center lg:space-x-3 xl:space-x-4">
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                        <a href="#">
+                            <img src="/assets/img/logo/social/Social icon.png" alt="socials icon">
+                        </a>
+                    </div>
+                </section>
+
+
+                <!-- info and form section -->
+                <section class="pb-14">
+                    <div class="mb-6 lg:mb-8">
+                        <span
+                            class="hidden lg:inline-block bg-main-Purple text-white p-1 font-semibold px-3 py-1 rounded-xl">ارتباط
+                            با ما :</span>
+                    </div>
+
+                    <div class="lg:flex lg:justify-between lg:items-center">
+                        <div class="space-y-4 mb-6">
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">آدرس
+                                : البرز، کرج،
+                                گلشهر، بلوار
+                                مصطفی خمینی، مجتمع کسری، واحد 25 ، پلاک7612</p>
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">ایمیل
+                                :
+                                infoexiness@gmail.com
+                            </p>
+                            <p class="font-normal text-sm lg:text-base w-8/12 lg:w-auto lg:mx-0 mx-auto leading-6">تماس
+                                : 09365008696
+                            </p>
+                            <div class="flex items-center justify-center space-x-2 lg:space-x-6 lg:hidden">
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                                <a href="#">
+                                    <img class="w-11/12" src="/assets/img/logo/social/Social icon.png"
+                                        alt="socials icon">
+                                </a>
+                            </div>
+                        </div>
+
+                        <form action="#" class="lg:ml-24">
+                            <div
+                                class="grid grid-cols-3 gap-x-2 py-3 px-4 lg:px-8 lg:py-12 bg-white rounded-2xl sm:w-8/12 lg:w-auto sm:mx-auto">
+                                <div class="col-span-2">
+                                    <input
+                                        class="w-full h-full bg-white px-2 lg:px-4 py-2 lg:py-4 border-1 border-black text-sm lg:text-base font-normal rounded-lg"
+                                        type="text" placeholder="ایمیل">
+                                </div>
+                                <div class="col-span-1">
+                                    <button
+                                        class="w-full h-full lg:text-base text-sm font-semibold bg-main-Purple text-white rounded-lg">ارسال
+                                        پیام</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!-- exiness -->
+                <section class="pb-4 lg:pb-8">
+                    <h3 class="text-center border-b-1 border-black font-bold text-[13px] lg:text-xl pb-2">
+                        اکسینس تحولی در بـیزنس | EXINESS Revelotion In Business
+                    </h3>
+                </section>
+                <!-- copyright -->
+                <section class="flex items-center justify-center gap-x-4 pb-3 lg:pb-4 text-center">
+                    <p class="font-normal text-[10px] lg:text-sm">Privacy Policy</p>
+                    <p class="font-normal text-[10px] lg:text-sm">
+                        © 2023 EXINESS. All Rights Reserved.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/js/main.js"></script>
+    <script src="/js/lib/flowbite/flowbite.min.js"></script>
+</body>
+
+</html>
