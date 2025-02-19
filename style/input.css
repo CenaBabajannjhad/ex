@@ -137,10 +137,11 @@ body {
   }
 
   .login-background-gradient {
+    background: rgb(97, 71, 168);
     background: linear-gradient(
-      107.96deg,
-      rgba(138, 119, 189, 0.4148) 1.32%,
-      rgba(65, 0, 129, 0.6176) 92.54%
+      61deg,
+      rgba(169, 137, 255, 0.411) 0%,
+      rgb(141, 108, 231) 98%
     );
   }
 
@@ -156,8 +157,8 @@ body {
     background: rgb(97, 71, 168);
     background: linear-gradient(
       61deg,
-      rgba(97, 71, 168, 0.4111694677871149) 0%,
-      rgba(97, 71, 168, 0.8) 98%
+      rgba(169, 137, 255, 0.411) 0%,
+      rgb(141, 108, 231) 98%
     );
   }
 

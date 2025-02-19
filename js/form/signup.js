@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to send signup request
 async function signup(userData) {
   try {
-    const response = await fetch("https://api.exiness.com/api/auth/register", {
+    const response = await fetch("https://api.exiness.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
